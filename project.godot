@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="GMTK-BIG-TEAM"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Global="*res://util/global.gd"
 
 [editor_plugins]
 
