@@ -1,3 +1,29 @@
-[gd_scene format=3 uid="uid://fesoddsaeaxx"]
+[gd_scene load_steps=5 format=3 uid="uid://fesoddsaeaxx"]
 
-[node name="elephant" type="Node2D"]
+[ext_resource type="Script" path="res://scenes/things/elephant.gd" id="1_p1pjo"]
+[ext_resource type="Texture2D" uid="uid://b65ruf6r1pbmv" path="res://assets/elephant.png" id="1_q2ljk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpt35"]
+size = Vector2(60, 60)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j8ehg"]
+radius = 24.0
+
+[node name="elephant" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_p1pjo")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.3)
+texture = ExtResource("1_q2ljk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fpt35")
+
+[node name="DestructionZone" type="Area2D" parent="."]
+position = Vector2(30, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DestructionZone"]
+shape = SubResource("CircleShape2D_j8ehg")
+
+[connection signal="body_entered" from="DestructionZone" to="." method="_on_destruction_zone_body_entered"]

@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cylqk18xbhke8"]
+[gd_scene load_steps=3 format=3 uid="uid://cylqk18xbhke8"]
 
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="1_u2s5w"]
 [ext_resource type="PackedScene" uid="uid://fesoddsaeaxx" path="res://scenes/things/elephant.tscn" id="2_tfahc"]
-[ext_resource type="PackedScene" uid="uid://csh0es2febnbu" path="res://scenes/things/crate.tscn" id="3_72luh"]
 
 [node name="level0" type="Node2D"]
 
@@ -11,6 +10,3 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0
 
 [node name="elephant" parent="." instance=ExtResource("2_tfahc")]
 position = Vector2(538, 296)
-
-[node name="crate" parent="." instance=ExtResource("3_72luh")]
-position = Vector2(97, 288)

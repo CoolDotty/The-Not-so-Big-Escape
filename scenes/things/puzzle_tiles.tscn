@@ -1,4 +1,23 @@
-[gd_scene format=3 uid="uid://by2e3mxkhbltn"]
+[gd_scene load_steps=4 format=3 uid="uid://by2e3mxkhbltn"]
+
+[ext_resource type="Texture2D" uid="uid://b56dj1jny1krv" path="res://assets/puzzle_tiles.png" id="1_5m0sc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ckvdq"]
+texture = ExtResource("1_5m0sc")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_r73a2"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ckvdq")
 
 [node name="puzzle_tiles" type="TileMap"]
+tile_set = SubResource("TileSet_r73a2")
 format = 2

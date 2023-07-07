@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://csh0es2febnbu"]
+[gd_scene load_steps=4 format=3 uid="uid://csh0es2febnbu"]
 
-[node name="crate" type="Node2D"]
+[ext_resource type="Script" path="res://scenes/things/crate.gd" id="1_5xuhr"]
+[ext_resource type="Texture2D" uid="uid://df1xunllu05nd" path="res://assets/crate.png" id="1_y6tcb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o4xyy"]
+size = Vector2(60, 60)
+
+[node name="crate" type="StaticBody2D"]
+script = ExtResource("1_5xuhr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("1_y6tcb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_o4xyy")
