@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfmxhbui2l6q8"]
+[gd_scene load_steps=9 format=3 uid="uid://bore4shjcacta"]
 
 [ext_resource type="Script" path="res://scenes/things/player_controller.gd" id="1_y7elc"]
 [ext_resource type="Texture2D" uid="uid://lklhrkwmybjf" path="res://assets/Mouse.png" id="2_7ptnw"]
+[ext_resource type="Gradient" uid="uid://b25go6dawksdg" path="res://scenes/things/mouse_danger_gradient.tres" id="2_ekgx6"]
 [ext_resource type="Texture2D" uid="uid://3avfbwrnd7fg" path="res://assets/Mouse_normal.png" id="3_2fkmh"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="4_gfdkj"]
 [ext_resource type="Texture2D" uid="uid://bsri3pbifm4eq" path="res://assets/flatrat.png" id="5_etf2t"]
@@ -13,8 +14,10 @@ normal_texture = ExtResource("3_2fkmh")
 [sub_resource type="CircleShape2D" id="CircleShape2D_eobx6"]
 radius = 8.0
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("dangerLight")]
 script = ExtResource("1_y7elc")
+grad = ExtResource("2_ekgx6")
+dangerLight = NodePath("PointLight2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
