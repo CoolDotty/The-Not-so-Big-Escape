@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bore4shjcacta"]
+[gd_scene load_steps=7 format=3 uid="uid://bore4shjcacta"]
 
 [ext_resource type="Script" path="res://scenes/things/player_controller.gd" id="1_y7elc"]
 [ext_resource type="Texture2D" uid="uid://lklhrkwmybjf" path="res://assets/Mouse.png" id="2_7ptnw"]
 [ext_resource type="Texture2D" uid="uid://3avfbwrnd7fg" path="res://assets/Mouse_normal.png" id="3_2fkmh"]
+[ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="4_gfdkj"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_3n83r"]
 diffuse_texture = ExtResource("2_7ptnw")
@@ -19,5 +20,11 @@ texture_filter = 1
 texture = SubResource("CanvasTexture_3n83r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("CircleShape2D_eobx6")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.384314, 0.384314, 0.384314, 1)
+shadow_enabled = true
+texture = ExtResource("4_gfdkj")
+texture_scale = 0.2
+height = 10.0

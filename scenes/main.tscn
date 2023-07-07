@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bctkgwmdbh354"]
+[gd_scene load_steps=3 format=3 uid="uid://bctkgwmdbh354"]
 
 [ext_resource type="PackedScene" uid="uid://cylqk18xbhke8" path="res://scenes/levels/level0.tscn" id="1_itxb3"]
+[ext_resource type="PackedScene" uid="uid://dapbbrcphrkey" path="res://scenes/levels/lighting_test.tscn" id="3_1c1ks"]
 
 [node name="Main" type="Node2D"]
+
+[node name="lighting" parent="." instance=ExtResource("3_1c1ks")]
+position = Vector2(-25.0135, -8.91488)
 
 [node name="level0" parent="." instance=ExtResource("1_itxb3")]

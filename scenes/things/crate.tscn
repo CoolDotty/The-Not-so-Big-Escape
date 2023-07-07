@@ -1,17 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://csh0es2febnbu"]
+[gd_scene load_steps=6 format=3 uid="uid://csh0es2febnbu"]
 
 [ext_resource type="Script" path="res://scenes/things/crate.gd" id="1_5xuhr"]
 [ext_resource type="Texture2D" uid="uid://df1xunllu05nd" path="res://assets/crate.png" id="1_y6tcb"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_djmvd"]
+diffuse_texture = ExtResource("1_y6tcb")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o4xyy"]
 size = Vector2(60, 60)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1cv4b"]
+polygon = PackedVector2Array(107, -106.1, 107, 106, 106.1, 107, -106, 107, -107, 106.1, -107, -106.1, -106, -106.6, 106, -107)
 
 [node name="crate" type="StaticBody2D"]
 script = ExtResource("1_5xuhr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.28, 0.28)
-texture = ExtResource("1_y6tcb")
+texture = SubResource("CanvasTexture_djmvd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_o4xyy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+scale = Vector2(0.28, 0.28)
+occluder = SubResource("OccluderPolygon2D_1cv4b")
