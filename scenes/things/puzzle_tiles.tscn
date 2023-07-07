@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://by2e3mxkhbltn"]
+[gd_scene load_steps=7 format=3 uid="uid://by2e3mxkhbltn"]
 
 [ext_resource type="Texture2D" uid="uid://b56dj1jny1krv" path="res://assets/puzzle_tiles.png" id="1_dh0hp"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_820ku"]
 polygon = PackedVector2Array(25, -25, 24.625, 24.75, -25.125, 25, -24.875, -25)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rapwk"]
+polygon = PackedVector2Array(-23.712, -7.01539, 23.712, -6.73477, 23.712, 11.7859, -24.2732, 11.2246)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xshum"]
+polygon = PackedVector2Array(-11.8125, -23.625, 6.9375, -23.75, 6.9375, 23.875, -11.6875, 23.75)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vl6km"]
 texture = ExtResource("1_dh0hp")
@@ -17,11 +23,15 @@ texture_region_size = Vector2i(64, 64)
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
 2:0/0 = 0
+2:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_rapwk")
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26.9143, -9.8995, 26.7375, -9.72272, 26.6491, 14.5841, -26.9143, 14.4957, -26.4723, 11.1369)
 3:0/0 = 0
+3:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_xshum")
 3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.2449, -24.096, 7.20517, -24.0172, 7.12643, 24.1747, -12.2449, 24.1747)
 4:0/0 = 0
 4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:0/0/physics_layer_0/angular_velocity = 0.0

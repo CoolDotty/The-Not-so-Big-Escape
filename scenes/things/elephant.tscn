@@ -28,8 +28,10 @@ position = Vector2(30, 0)
 shape = SubResource("CircleShape2D_j8ehg")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 0.5
 shadow_enabled = true
 texture = ExtResource("3_sq0nk")
+texture_scale = 5.0
 height = 10.0
 
 [connection signal="body_entered" from="DestructionZone" to="." method="_on_destruction_zone_body_entered"]
