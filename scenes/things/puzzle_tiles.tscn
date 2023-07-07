@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://by2e3mxkhbltn"]
+
+[node name="puzzle_tiles" type="TileMap"]
+format = 2
