@@ -32,4 +32,10 @@ shadow_enabled = true
 texture = ExtResource("3_sq0nk")
 height = 10.0
 
+[node name="vision" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="vision"]
+polygon = PackedVector2Array(0, 0, 100, -100, 180, -75, 200, 0, 180, 75, 100, 100)
+
 [connection signal="body_entered" from="DestructionZone" to="." method="_on_destruction_zone_body_entered"]
+[connection signal="body_entered" from="vision" to="." method="_on_vision_body_entered"]

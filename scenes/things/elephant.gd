@@ -29,3 +29,8 @@ func _physics_process(delta):
 func _on_destruction_zone_body_entered(body):
 	if body.get("is_destroyable"):
 		body.destroy()
+
+
+func _on_vision_body_entered(body):
+	if body.get_class() == "CharacterBody2D":
+		self.visible = true
