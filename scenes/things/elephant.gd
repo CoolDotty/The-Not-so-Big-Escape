@@ -39,7 +39,6 @@ func _physics_process(delta):
 	if not result.get("collider"):
 		return
 	var can_see_player = result.collider == player
-	print(can_see_player)
 	
 
 
