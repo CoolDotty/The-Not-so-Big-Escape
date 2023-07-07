@@ -3,7 +3,11 @@ extends CharacterBody2D
 const lore_name = "Whiskers"
 
 
-var is_spooked = true
+var is_spooked = false
+
+
+var current = false;
+enum State { idle, patrol, spooked, omg, shiftyeyes }
 
 
 const patrol_speed = 150
@@ -22,10 +26,28 @@ func _physics_process(delta):
 	
 	if (position - prev_pos).length() < 1:
 		rotation_degrees += 90
-
-
+	
+	# Mouse check
+	var player = get_node("../player")
+	if not is_instance_valid(player):
+		return
+	
+	var space_state = get_world_2d().direct_space_state
+	var query = PhysicsRayQueryParameters2D.create(global_position, player.global_position)
+	query.exclude = [self]
+	var result = space_state.intersect_ray(query)
+	if not result.get("collider"):
+		return
+	var can_see_player = result.collider == player
+	print(can_see_player)
+	
 
 
 func _on_destruction_zone_body_entered(body):
-	if body.get("is_destroyable"):
+	if State.spooked and body.get("is_destroyable"):
 		body.destroy()
+
+
+func destroy():
+	pass
+	# get flattened by elephant lol

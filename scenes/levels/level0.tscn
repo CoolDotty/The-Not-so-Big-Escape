@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="1_u2s5w"]
 [ext_resource type="PackedScene" uid="uid://fesoddsaeaxx" path="res://scenes/things/elephant.tscn" id="2_tfahc"]
 [ext_resource type="PackedScene" uid="uid://csh0es2febnbu" path="res://scenes/things/crate.tscn" id="3_72luh"]
-[ext_resource type="PackedScene" uid="uid://bore4shjcacta" path="res://scenes/things/mouse.tscn" id="4_ise37"]
+[ext_resource type="PackedScene" uid="uid://dfmxhbui2l6q8" path="res://scenes/things/mouse.tscn" id="4_ise37"]
 
 [node name="level0" type="Node2D"]
 
