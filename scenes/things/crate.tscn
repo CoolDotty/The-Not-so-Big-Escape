@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://csh0es2febnbu"]
+[gd_scene load_steps=10 format=3 uid="uid://csh0es2febnbu"]
 
 [ext_resource type="Script" path="res://scenes/things/crate.gd" id="1_5xuhr"]
 [ext_resource type="Texture2D" uid="uid://df1xunllu05nd" path="res://assets/crate.png" id="1_y6tcb"]
+[ext_resource type="Texture2D" uid="uid://bp5w1gymnh2nj" path="res://assets/crateboom.png" id="3_5fhvj"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_djmvd"]
 diffuse_texture = ExtResource("1_y6tcb")
@@ -11,6 +12,66 @@ size = Vector2(60, 60)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1cv4b"]
 polygon = PackedVector2Array(107, -106.1, 107, 106, 106.1, 107, -106, 107, -107, 106.1, -107, -106.1, -106, -106.6, 106, -107)
+
+[sub_resource type="Animation" id="Animation_ku6wm"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Explode:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_vjndo"]
+resource_name = "boom"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Explode:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ktm42"]
+_data = {
+"boom": SubResource("Animation_vjndo"),
+"idle": SubResource("Animation_ku6wm")
+}
 
 [node name="crate" type="StaticBody2D"]
 script = ExtResource("1_5xuhr")
@@ -25,3 +86,12 @@ shape = SubResource("RectangleShape2D_o4xyy")
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 scale = Vector2(0.28, 0.28)
 occluder = SubResource("OccluderPolygon2D_1cv4b")
+
+[node name="Animate" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ktm42")
+}
+
+[node name="Explode" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_5fhvj")
