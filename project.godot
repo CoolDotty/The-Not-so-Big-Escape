@@ -56,6 +56,10 @@ click={
 ]
 }
 
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://scenes/storymode/hack.dialogue")
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

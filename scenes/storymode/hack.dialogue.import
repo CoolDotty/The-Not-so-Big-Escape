@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://t3t4ijyi6fac"
+path="res://.godot/imported/hack.dialogue-8fde90388c76da43e5c96ae1de0a9971.tres"
+
+[deps]
+
+source_file="res://scenes/storymode/hack.dialogue"
+dest_files=["res://.godot/imported/hack.dialogue-8fde90388c76da43e5c96ae1de0a9971.tres"]
+
+[params]
+
+defaults=true
