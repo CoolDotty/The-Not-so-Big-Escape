@@ -1,0 +1,164 @@
+[gd_scene load_steps=16 format=3 uid="uid://fesoddsaeaxx"]
+
+[ext_resource type="Script" path="res://scenes/things/giant.gd" id="1_p1pjo"]
+[ext_resource type="Gradient" uid="uid://b25go6dawksdg" path="res://scenes/things/mouse_danger_gradient.tres" id="2_c2xdt"]
+[ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="3_sq0nk"]
+[ext_resource type="Texture2D" uid="uid://dc0hdxfiuunid" path="res://assets/Mouse_game_jam_sprite_sheet.png" id="3_t5kt3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ysp3"]
+atlas = ExtResource("3_t5kt3")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42po5"]
+atlas = ExtResource("3_t5kt3")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbnh4"]
+atlas = ExtResource("3_t5kt3")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3345"]
+atlas = ExtResource("3_t5kt3")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2wsh"]
+atlas = ExtResource("3_t5kt3")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbk2n"]
+atlas = ExtResource("3_t5kt3")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u1i21"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ysp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42po5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbnh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3345")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2wsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbk2n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_isnvy"]
+resource_name = "giant_eyes"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/LightEyeLeft:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2, 0), Vector2(0, 0), Vector2(5, 0), Vector2(2, 0), Vector2(0, 0), Vector2(5, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/LightEyeRight:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2, 0), Vector2(0, 0), Vector2(5, 0), Vector2(2, 0), Vector2(0, 0), Vector2(5, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lkygr"]
+_data = {
+"giant_eyes": SubResource("Animation_isnvy")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cb5pt"]
+radius = 11.0
+height = 36.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j8ehg"]
+radius = 15.0
+
+[node name="giant" type="CharacterBody2D" node_paths=PackedStringArray("dangerLightLeft", "dangerLightRight") groups=["elephants"]]
+motion_mode = 1
+script = ExtResource("1_p1pjo")
+grad = ExtResource("2_c2xdt")
+dangerLightLeft = NodePath("AnimatedSprite2D/LightEyeLeft")
+dangerLightRight = NodePath("AnimatedSprite2D/LightEyeRight")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(-1, -1)
+sprite_frames = SubResource("SpriteFrames_u1i21")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+root_node = NodePath("../..")
+autoplay = "giant_eyes"
+libraries = {
+"": SubResource("AnimationLibrary_lkygr")
+}
+
+[node name="LightEyeLeft" type="PointLight2D" parent="AnimatedSprite2D"]
+position = Vector2(-20, 3)
+rotation = 3.14159
+shadow_enabled = true
+texture = ExtResource("3_sq0nk")
+offset = Vector2(2.5, 0)
+texture_scale = 0.05
+height = 10.0
+
+[node name="LightEyeRight" type="PointLight2D" parent="AnimatedSprite2D"]
+position = Vector2(-20, -3)
+rotation = 3.14159
+shadow_enabled = true
+texture = ExtResource("3_sq0nk")
+offset = Vector2(2.5, 0)
+texture_scale = 0.05
+height = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_cb5pt")
+
+[node name="DestructionZone" type="Area2D" parent="."]
+position = Vector2(30, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DestructionZone"]
+position = Vector2(-17, 0)
+shape = SubResource("CircleShape2D_j8ehg")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 0.3
+shadow_enabled = true
+texture = ExtResource("3_sq0nk")
+texture_scale = 5.0
+height = 10.0
+
+[node name="vision" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="vision"]
+polygon = PackedVector2Array(0, 0, 100, -100, 180, -75, 200, 0, 180, 75, 100, 100)
+
+[node name="SpookTimer" type="Timer" parent="vision"]
+
+[connection signal="body_entered" from="DestructionZone" to="." method="_on_destruction_zone_body_entered"]
+[connection signal="body_entered" from="vision" to="." method="_on_vision_body_entered"]
+[connection signal="timeout" from="vision/SpookTimer" to="." method="_on_spook_timer_timeout"]
