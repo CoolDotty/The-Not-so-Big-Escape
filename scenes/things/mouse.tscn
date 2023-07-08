@@ -24,6 +24,7 @@ texture_filter = 1
 texture = SubResource("CanvasTexture_3n83r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_eobx6")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
