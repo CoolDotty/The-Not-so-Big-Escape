@@ -196,6 +196,7 @@ func _agro_tick(delta):
 	move_and_slide()
 	if (prev_pos - position).length() < 0.1:
 		Set_action_state(_action_state.is_patrolling)
+		rotation = agro_vector.angle()
 		agro_vector = Vector2.ZERO
 
 var _agro_timer
