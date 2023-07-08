@@ -2,6 +2,10 @@ extends CharacterBody2D
 
 const lore_name = "Whiskers"
 
+@export var grad: Gradient
+@export var dangerLightLeft: PointLight2D
+@export var dangerLightRight: PointLight2D
+
 enum _action_state {
 	none,
 	is_patrolling,
@@ -10,7 +14,6 @@ enum _action_state {
 }
 
 var is_spooked = false
-
 
 const patrol_speed = 150
 const spook_speed = 500
@@ -36,8 +39,21 @@ func _physics_process(delta):
 	
 	if (position - prev_pos).length() < 1:
 		rotation_degrees += 90
+	
+	color_by_danger()
 
 
+# Set the color of the mouse light based on distance to player
+func color_by_danger():
+	# how far is the player from me
+	var player = get_node("../player")
+	var my_position = global_transform.origin
+	var player_position = player.global_transform.origin
+	var d = my_position.distance_to(player_position)
+	var gradientPosition = d / 500
+	print(d)
+	dangerLightLeft.color = grad.sample(gradientPosition)
+	dangerLightRight.color = grad.sample(gradientPosition)
 
 
 func _on_destruction_zone_body_entered(body):
@@ -94,4 +110,3 @@ func _alerted_tick():
 	#_explore_sound_source()
 	pass
 	
-

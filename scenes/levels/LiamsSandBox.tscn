@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://bixfamee3s5rd"]
 
-[ext_resource type="PackedScene" uid="uid://bore4shjcacta" path="res://scenes/things/mouse.tscn" id="1_s272i"]
+[ext_resource type="PackedScene" uid="uid://bore4shjcacta" path="res://scenes/things/player.tscn" id="1_s272i"]
+
 
 [node name="LiamsSandBox" type="Node2D"]
 
