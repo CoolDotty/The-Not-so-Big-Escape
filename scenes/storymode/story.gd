@@ -9,7 +9,6 @@ var current_frame = 0
 var hack = preload("res://scenes/storymode/hack.dialogue")
 
 var shake = 0.0
-var pos = Vector2(-30, -30)
 
 var time = 0.0
 
@@ -19,9 +18,7 @@ func _ready():
 	_next_frame(null)
 	DialogueManager.dialogue_ended.connect(_next_frame)
 	
-	size = get_viewport().size
-	scale = Vector2(1.1, 1.1)
-	position = pos
+	anchors_preset = PRESET_FULL_RECT
 
 
 func _process(delta):
@@ -37,7 +34,7 @@ func _process(delta):
 		rotation = sin(time * 5) / 20
 	
 	if s.effect == Slide.FX.Shake:
-		position = pos + Vector2(randf_range(-shake, shake), randf_range(-shake, shake))
+		position = Vector2(randf_range(-shake, shake), randf_range(-shake, shake))
 		shake = max(shake - 0.5, 0.0)
 	else:
 		shake = 0.0
