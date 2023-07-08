@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://bj70cqbd3i2vw"]
 
 [ext_resource type="Script" path="res://scenes/things/giant.gd" id="1_p1pjo"]
-[ext_resource type="Gradient" path="res://scenes/things/mouse_danger_gradient.tres" id="2_c2xdt"]
+[ext_resource type="Gradient" uid="uid://b25go6dawksdg" path="res://scenes/things/mouse_danger_gradient.tres" id="2_c2xdt"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="3_sq0nk"]
 [ext_resource type="Texture2D" uid="uid://dc0hdxfiuunid" path="res://assets/Mouse_game_jam_sprite_sheet.png" id="3_t5kt3"]
 [ext_resource type="Shader" path="res://scenes/things/giantanimatednormalmap.gdshader" id="3_yhclw"]
