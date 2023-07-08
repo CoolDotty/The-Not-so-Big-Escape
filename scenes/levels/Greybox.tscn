@@ -98,7 +98,7 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5cdio")
 
-[node name="level0" type="Node2D"]
+[node name="level1" type="Node2D"]
 
 [node name="lighting" parent="." instance=ExtResource("1_f516t")]
 
