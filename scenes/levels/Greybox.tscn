@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://tvuvhrdbxn7b"]
+[gd_scene load_steps=8 format=3 uid="uid://tvuvhrdbxn7b"]
 
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="1_67x8m"]
 [ext_resource type="PackedScene" path="res://scenes/things/giant.tscn" id="2_o30yc"]
 [ext_resource type="PackedScene" uid="uid://csh0es2febnbu" path="res://scenes/things/crate.tscn" id="3_iqc2o"]
 [ext_resource type="PackedScene" path="res://scenes/things/player.tscn" id="4_qkvyc"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="5_0n01h"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_a02ja"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_tif0l"]
 
 [node name="level0" type="Node2D"]
 
@@ -17,6 +21,7 @@ dangerLightLeft = NodePath("")
 dangerLightRight = NodePath("")
 
 [node name="crate" parent="." instance=ExtResource("3_iqc2o")]
+visible = false
 position = Vector2(97, 288)
 
 [node name="player" parent="." instance=ExtResource("4_qkvyc")]
@@ -28,3 +33,143 @@ energy = 0.5
 shadow_enabled = true
 texture = ExtResource("5_0n01h")
 height = 10.0
+
+[node name="Wall" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(192, 94)
+scale = Vector2(10, 60)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall9" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(383, 94)
+scale = Vector2(10, 60)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall10" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(448, 94)
+scale = Vector2(10, 60)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall11" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(577, 94)
+scale = Vector2(10, 60)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall12" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(513, 156)
+scale = Vector2(10, 60)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall8" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(251, 145)
+scale = Vector2(10, 60)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall2" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(132, 153)
+scale = Vector2(10, 60)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall5" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(192, 285)
+scale = Vector2(10, 60)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall18" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(323, 376)
+scale = Vector2(10, 140)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall19" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(382, 448)
+scale = Vector2(10, 140)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall20" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(619, 448)
+scale = Vector2(10, 140)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall14" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(125, 352)
+scale = Vector2(10, 60)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall15" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(125, 478)
+scale = Vector2(10, 60)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall16" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(256, 478)
+scale = Vector2(10, 60)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall3" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(157, 118)
+scale = Vector2(60, 10)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall7" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(317, 120)
+scale = Vector2(120, 10)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall6" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(228, 180)
+scale = Vector2(60, 10)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall17" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(189, 316)
+scale = Vector2(140, 10)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall13" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(578, 181)
+scale = Vector2(120, 10)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
+
+[node name="Wall4" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(137, 253)
+scale = Vector2(120, 10)
+mesh = SubResource("BoxMesh_a02ja")
+texture = SubResource("CanvasTexture_tif0l")
