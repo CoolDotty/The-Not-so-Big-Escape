@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://b65ruf6r1pbmv" path="res://assets/elephant.png" id="1_q2ljk"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="3_sq0nk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpt35"]
-size = Vector2(60, 60)
+[sub_resource type="CircleShape2D" id="CircleShape2D_6xe27"]
+radius = 29.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j8ehg"]
 radius = 24.0
@@ -19,7 +19,7 @@ scale = Vector2(0.25, 0.3)
 texture = ExtResource("1_q2ljk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_fpt35")
+shape = SubResource("CircleShape2D_6xe27")
 
 [node name="DestructionZone" type="Area2D" parent="."]
 position = Vector2(30, 0)
@@ -39,6 +39,11 @@ height = 10.0
 polygon = PackedVector2Array(0, 0, 100, -100, 180, -75, 200, 0, 180, 75, 100, 100)
 
 [node name="SpookTimer" type="Timer" parent="vision"]
+one_shot = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_postprocessing = 1
+debug_enabled = true
 
 [connection signal="body_entered" from="DestructionZone" to="." method="_on_destruction_zone_body_entered"]
 [connection signal="body_entered" from="vision" to="." method="_on_vision_body_entered"]
