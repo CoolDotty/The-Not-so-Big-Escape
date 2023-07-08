@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cylqk18xbhke8"]
+[gd_scene load_steps=6 format=3 uid="uid://cylqk18xbhke8"]
 
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="1_u2s5w"]
 [ext_resource type="PackedScene" uid="uid://fesoddsaeaxx" path="res://scenes/things/elephant.tscn" id="2_tfahc"]
 [ext_resource type="PackedScene" uid="uid://csh0es2febnbu" path="res://scenes/things/crate.tscn" id="3_72luh"]
 [ext_resource type="PackedScene" uid="uid://bore4shjcacta" path="res://scenes/things/mouse.tscn" id="4_ise37"]
+[ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="5_wjuyi"]
 
 [node name="level0" type="Node2D"]
 
@@ -18,4 +19,10 @@ position = Vector2(97, 288)
 
 [node name="player" parent="." instance=ExtResource("4_ise37")]
 position = Vector2(1056, 91)
-speed = 400
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(3, 284)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("5_wjuyi")
+height = 10.0
