@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="1_67x8m"]
 [ext_resource type="PackedScene" path="res://scenes/things/giant.tscn" id="2_o30yc"]
 [ext_resource type="PackedScene" uid="uid://csh0es2febnbu" path="res://scenes/things/crate.tscn" id="3_iqc2o"]
-[ext_resource type="PackedScene" path="res://scenes/things/player.tscn" id="4_qkvyc"]
+[ext_resource type="PackedScene" uid="uid://b36kwhhp5uto0" path="res://scenes/things/player.tscn" id="4_qkvyc"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="5_0n01h"]
 [ext_resource type="Texture2D" uid="uid://dpgtephvqr7tk" path="res://assets/NewTileMap.png" id="7_8vnki"]
 

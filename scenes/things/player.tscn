@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bore4shjcacta"]
+[gd_scene load_steps=6 format=3 uid="uid://b36kwhhp5uto0"]
 
 [ext_resource type="Script" path="res://scenes/things/player_controller.gd" id="1_y7elc"]
 [ext_resource type="Texture2D" uid="uid://fk0vaie5ydyc" path="res://assets/elephant-top-view.svg.hi.png" id="3_jx6iy"]
@@ -23,13 +23,15 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_f7jqg")
 
 [node name="PlayerLight2D" type="PointLight2D" parent="."]
-energy = 0.3
+energy = 0.5
 shadow_enabled = true
 texture = ExtResource("4_gfdkj")
-texture_scale = 0.2
+texture_scale = 0.3
 height = 10.0
 
 [node name="DeathSprite" type="Sprite2D" parent="."]
 visible = false
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_etf2t")
+
+[node name="Camera2D" type="Camera2D" parent="."]
