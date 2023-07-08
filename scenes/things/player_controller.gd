@@ -13,8 +13,13 @@ func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
 	look_at(position+velocity)
+	
 	if Input.is_action_just_pressed("click"):
 		squeak()
+	if Input.is_action_just_pressed("restart"):
+		_restart()
+	if Input.is_action_just_pressed("interact"):
+		_interact()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -38,3 +43,13 @@ func _no_collide():
 
 func squeak():
 	Global.mouse_squeaked.emit(self)
+	
+func _restart():
+	print("aaaaaaaa")
+	get_tree().reload_current_scene()
+	
+signal Player_interacting()
+func _interact():
+	#add sound effect here
+	#add effect here
+	Player_interacting.emit()

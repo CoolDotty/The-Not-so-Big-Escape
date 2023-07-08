@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cylqk18xbhke8"]
+[gd_scene load_steps=8 format=3 uid="uid://cylqk18xbhke8"]
 
 [ext_resource type="PackedScene" uid="uid://dapbbrcphrkey" path="res://scenes/levels/lighting_test.tscn" id="1_7erh3"]
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="1_u2s5w"]
 [ext_resource type="PackedScene" uid="uid://bj70cqbd3i2vw" path="res://scenes/things/giant.tscn" id="2_tfahc"]
 [ext_resource type="PackedScene" uid="uid://csh0es2febnbu" path="res://scenes/things/crate.tscn" id="3_72luh"]
-[ext_resource type="PackedScene" path="res://scenes/things/player.tscn" id="4_ise37"]
+[ext_resource type="PackedScene" uid="uid://b36kwhhp5uto0" path="res://scenes/things/player.tscn" id="4_ise37"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="5_wjuyi"]
+[ext_resource type="PackedScene" uid="uid://cr84yd28blu11" path="res://scenes/things/pressurePlate.tscn" id="7_k6tvw"]
 
 [node name="level0" type="Node2D"]
 
@@ -30,3 +31,9 @@ energy = 0.5
 shadow_enabled = true
 texture = ExtResource("5_wjuyi")
 height = 10.0
+
+[node name="crate2" parent="." instance=ExtResource("3_72luh")]
+position = Vector2(264, 420)
+
+[node name="pressurePlate" parent="." instance=ExtResource("7_k6tvw")]
+position = Vector2(1046, 178)
