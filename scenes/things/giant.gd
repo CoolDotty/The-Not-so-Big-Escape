@@ -34,9 +34,10 @@ enum _action_state {
 	is_patrolling,
 	is_spooked,
 	is_agro,
-	is_alerted
+	is_alerted,
+	is_agro_windup
 }
-var _current_action_state = _action_state.none
+var _current_action_state: _action_state = _action_state.none
 
 
 
@@ -62,29 +63,32 @@ func _physics_process(delta):
 	
 	rotation = velocity.angle()
 	
-	var prev_pos = position
-	
-	
-	
-	var hit = move_and_slide()
-	
 	color_by_danger()
 
 
 # Set the color of the mouse light based on distance to player
 func color_by_danger():
 	# how far is the player from me
-	var player = $"../player"
-	var my_position = global_transform.origin
-	var player_position = player.global_transform.origin
-	var d = my_position.distance_to(player_position)
-	var gradientPosition = d / 500
-	dangerLightLeft.color = grad.sample(gradientPosition)
-	dangerLightRight.color = grad.sample(gradientPosition)
+	# var player = $"../player"
+	# var my_position = global_transform.origin
+	# var player_position = player.global_transform.origin
+	# var d = my_position.distance_to(player_position)
+	# var gradientPosition = d / 500
+	# dangerLightLeft.color = grad.sample(gradientPosition)
+	# dangerLightRight.color = grad.sample(gradientPosition)
+	if _current_action_state == _action_state.is_agro:
+		dangerLightLeft.color = Color.YELLOW
+		dangerLightRight.color = Color.YELLOW
+	elif _current_action_state == _action_state.is_agro_windup:
+		dangerLightLeft.color = Color.RED
+		dangerLightRight.color = Color.RED
+	else:
+		dangerLightLeft.color = Color.WHITE
+		dangerLightRight.color = Color.WHITE
 
 
 func _on_destruction_zone_body_entered(body):
-	if body.get("is_destroyable"):
+	if _current_action_state == _action_state.is_agro and body.get("is_destroyable"):
 		body.destroy()
 
 
@@ -97,7 +101,6 @@ func _on_vision_body_entered(body):
 		var player_position = player.global_transform.origin
 		var query = PhysicsRayQueryParameters2D.create(my_position, player_position)
 		var result = space_state.intersect_ray(query)
-		print(result)
 		if result.collider == player:
 			_agro(body)
 
@@ -105,8 +108,11 @@ func _on_vision_body_exited(body):
 		$vision/StateTimer.start(1)
 
 func _agro(target):
+	if _current_action_state == _action_state.is_agro or _current_action_state == _action_state.is_agro_windup:
+		return
 	player = target
-	Set_action_state(_action_state.is_agro)
+	agro_vector = (position - target.position).normalized() * -1
+	Set_action_state(_action_state.is_agro_windup)
 
 func _on_spooked(min = 1.0, max = 2.0):
 	is_spooked = true
@@ -151,6 +157,8 @@ func _action_state_tick(delta, state: _action_state):
 			
 		_action_state.is_agro:
 			_agro_tick(delta)
+		_action_state.is_agro_windup:
+			_agro_windup(delta)
 		_:
 			pass
 	return
@@ -164,9 +172,10 @@ func _patrolling_tick():
 	if(_navAgent.is_navigation_finished() or not _navAgent.is_target_reachable()):
 		_setRandom_Nav_target_Pos()
 		
-	
+	move_and_slide()
 func _spooked_tick():
 	velocity = Vector2(spook_speed, 0).rotated(rotation)
+	move_and_slide()
 	
 func _alerted_tick():
 	var dir = _navAgent.get_next_path_position() - position
@@ -175,14 +184,36 @@ func _alerted_tick():
 		Set_action_state(_action_state.is_patrolling)
 	move_and_slide()
 	
+
+var agro_vector: Vector2 = Vector2.ZERO
+
 func _agro_tick(delta):
-	if(player): _navAgent.target_position = player.global_transform.origin
-	else:
+	velocity += agro_vector * max_acceleration * delta * 1.5
+	
+	var prev_pos = position
+	move_and_slide()
+	if (prev_pos - position).length() < 0.1:
 		Set_action_state(_action_state.is_patrolling)
+		agro_vector = Vector2.ZERO
+
+var _agro_timer
+func _agro_windup(delta):
+	$AnimatedSprite2D.speed_scale = 2.0
+	var shake = 5
+	$AnimatedSprite2D.offset = Vector2(randf_range(-shake, shake), randf_range(-shake, shake))
+	if is_instance_valid(_agro_timer):
 		return
-	var dir = (_navAgent.get_next_path_position() - position).normalized()
-	velocity -= velocity * 0.4 * delta
-	velocity += dir * max_acceleration * delta * 1.5
+	_agro_timer = Timer.new()
+	add_child(_agro_timer)
+	_agro_timer.wait_time = 1.0
+	_agro_timer.one_shot = true
+	_agro_timer.start()
+	await _agro_timer.timeout
+	Set_action_state(_action_state.is_agro)
+	_agro_timer = null
+	$AnimatedSprite2D.speed_scale = 1.0
+	$AnimatedSprite2D.offset = Vector2.ZERO
+	
 
 @onready var Nav_stuck_timer : Timer = $Nav_stuck_timer
 var _last_record_loc = Vector2(0.0,0.0)
