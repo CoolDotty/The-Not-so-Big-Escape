@@ -14,10 +14,11 @@ normal_texture = ExtResource("3_2fkmh")
 [sub_resource type="CircleShape2D" id="CircleShape2D_eobx6"]
 radius = 8.0
 
-[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("dangerLight")]
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("dangerLightLeft", "dangerLightRight")]
 script = ExtResource("1_y7elc")
 grad = ExtResource("2_ekgx6")
-dangerLight = NodePath("PointLight2D")
+dangerLightLeft = NodePath("LightEyeLeft")
+dangerLightRight = NodePath("LightEyeRight")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -26,11 +27,22 @@ texture = SubResource("CanvasTexture_3n83r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_eobx6")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="LightEyeLeft" type="PointLight2D" parent="."]
+position = Vector2(4, -3)
 color = Color(0.384314, 0.384314, 0.384314, 1)
+energy = 2.0
 shadow_enabled = true
 texture = ExtResource("4_gfdkj")
-texture_scale = 0.2
+texture_scale = 0.05
+height = 10.0
+
+[node name="LightEyeRight" type="PointLight2D" parent="."]
+position = Vector2(4, 3)
+color = Color(0.384314, 0.384314, 0.384314, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("4_gfdkj")
+texture_scale = 0.05
 height = 10.0
 
 [node name="FlatRat" type="Sprite2D" parent="."]
