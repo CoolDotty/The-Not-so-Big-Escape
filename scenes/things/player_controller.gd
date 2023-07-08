@@ -17,7 +17,9 @@ func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
 	look_at(position+velocity)
-
+	if Input.is_action_just_pressed("click"):
+		squeak()
+	
 
 # Set the color of the mouse light based on distance to elephant
 func color_by_danger():
@@ -48,3 +50,6 @@ func destroy():
 
 func _no_collide():
 	$CollisionShape2D.disabled = true
+	
+func squeak():
+	Global.mouse_squeaked.emit(self)
