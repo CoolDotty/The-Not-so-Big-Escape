@@ -6,13 +6,6 @@ const lore_name = "Whiskers"
 @export var dangerLightLeft: PointLight2D
 @export var dangerLightRight: PointLight2D
 
-enum _action_state {
-	none,
-	is_patrolling,
-	is_spooked,
-	is_alerted
-}
-
 var is_spooked = false
 
 const patrol_speed = 150
@@ -67,13 +60,13 @@ func _physics_process(delta):
 		Nav_stuck_timer.start()
 		pass
 	
+	rotation = velocity.angle()
+	
 	var prev_pos = position
 	
 	
-	var hit = move_and_slide()
 	
-	if (position - prev_pos).length() < 1:
-		rotation_degrees += 90
+	var hit = move_and_slide()
 	
 	color_by_danger()
 
@@ -189,7 +182,7 @@ func _agro_tick(delta):
 		return
 	var dir = (_navAgent.get_next_path_position() - position).normalized()
 	velocity -= velocity * 0.4 * delta
-	velocity += dir * max_acceleration * delta * 3
+	velocity += dir * max_acceleration * delta * 1.5
 
 @onready var Nav_stuck_timer : Timer = $Nav_stuck_timer
 var _last_record_loc = Vector2(0.0,0.0)
