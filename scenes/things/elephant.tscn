@@ -10,7 +10,7 @@ size = Vector2(60, 60)
 [sub_resource type="CircleShape2D" id="CircleShape2D_j8ehg"]
 radius = 24.0
 
-[node name="elephant" type="CharacterBody2D"]
+[node name="elephant" type="CharacterBody2D" groups=["elephants"]]
 motion_mode = 1
 script = ExtResource("1_p1pjo")
 
@@ -28,7 +28,6 @@ position = Vector2(30, 0)
 shape = SubResource("CircleShape2D_j8ehg")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-energy = 0.5
 shadow_enabled = true
 texture = ExtResource("3_sq0nk")
 texture_scale = 5.0
@@ -39,5 +38,8 @@ height = 10.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="vision"]
 polygon = PackedVector2Array(0, 0, 100, -100, 180, -75, 200, 0, 180, 75, 100, 100)
 
+[node name="SpookTimer" type="Timer" parent="vision"]
+
 [connection signal="body_entered" from="DestructionZone" to="." method="_on_destruction_zone_body_entered"]
 [connection signal="body_entered" from="vision" to="." method="_on_vision_body_entered"]
+[connection signal="timeout" from="vision/SpookTimer" to="." method="_on_spook_timer_timeout"]
