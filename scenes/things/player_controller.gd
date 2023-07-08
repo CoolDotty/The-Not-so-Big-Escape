@@ -16,8 +16,6 @@ func get_input():
 	
 	if Input.is_action_just_pressed("click"):
 		squeak()
-	if Input.is_action_just_pressed("restart"):
-		_restart()
 	if Input.is_action_just_pressed("interact"):
 		_interact()
 
@@ -39,6 +37,7 @@ func destroy():
 	$Sprite2D.visible = false
 	$DeathSprite.visible = true
 	call_deferred("_no_collide")
+	Global.player_died.emit(self)
 
 
 func _no_collide():
@@ -47,11 +46,7 @@ func _no_collide():
 
 func squeak():
 	Global.mouse_squeaked.emit(self)
-	
-func _restart():
-	get_tree().reload_current_scene()
-	#add skipping cut scenes here
-	
+
 
 var _interact_Comp : ShapeCast2D
 func _init_interact():

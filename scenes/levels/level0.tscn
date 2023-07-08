@@ -25,7 +25,6 @@ position = Vector2(97, 288)
 
 [node name="player" parent="." instance=ExtResource("4_ise37")]
 position = Vector2(1056, 91)
-speed = 200
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(3, 284)
