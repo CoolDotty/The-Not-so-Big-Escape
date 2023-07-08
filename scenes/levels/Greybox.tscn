@@ -25,8 +25,8 @@ texture_region_size = Vector2i(64, 64)
 2:1/0 = 0
 2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:1/0/physics_layer_0/angular_velocity = 0.0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, -12.5, 32, -12.25, 30.25, -32)
-2:1/0/physics_layer_0/polygon_1/points = PackedVector2Array(-32, 7.75, 32, 9.5, 32, 32, -32, 32)
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, -22.5, 29.25, -22.75, 30.25, -32)
+2:1/0/physics_layer_0/polygon_1/points = PackedVector2Array(-32, 21.5, 32, 21.75, 32, 32, -32, 32, -32, 22.75)
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
@@ -62,6 +62,7 @@ texture_region_size = Vector2i(64, 64)
 0:2/0 = 0
 0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 2:0/0 = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
@@ -71,6 +72,7 @@ texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 0:3/0 = 0
 0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:3/0/physics_layer_0/angular_velocity = 0.0
@@ -103,7 +105,7 @@ layer_0/tile_data = PackedInt32Array(65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 26
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_i4mcy")
 format = 2
-layer_0/tile_data = PackedInt32Array(393220, 65536, 1, 786449, 65536, 1, 983063, 65536, 1, 393241, 65536, 1, 1048579, 131072, 1)
+layer_0/tile_data = PackedInt32Array(393220, 65536, 1, 786449, 65536, 1, 983063, 65536, 1, 393241, 65536, 1, 1048579, 131072, 1, 327684, 0, 1, 327702, 0, 1, 1310722, 0, 1, 1245207, 196608, 1, 1245208, 196608, 0, 1310744, 0, 0, 786443, 131072, 0, 786442, 0, 0, 720907, 196608, 1, 720906, 0, 1, 1048592, 0, 1, 1114127, 131072, 1, 917527, 0, 1, 655365, 0, 1)
 
 [node name="giant" parent="." instance=ExtResource("2_o30yc")]
 position = Vector2(803, 361)
