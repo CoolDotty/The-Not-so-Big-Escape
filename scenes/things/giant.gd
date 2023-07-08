@@ -133,6 +133,8 @@ func _on_alerted():
 func _on_spook_timer_timeout():
 	is_spooked = false
 	player = null
+	if (_current_action_state == _action_state.is_agro or _current_action_state == _action_state.is_agro_windup):
+		return
 	Set_action_state(_action_state.is_patrolling)
 
 func _explore_sound_source(location:Vector2):
@@ -230,5 +232,7 @@ func _setRandom_Nav_target_Pos():
 	_navAgent.target_position = _map.map_to_local(rndAvaliableTile)
 
 func _on_nav_stuck_timer_timeout():
+	if (_current_action_state == _action_state.is_agro or _current_action_state == _action_state.is_agro_windup):
+		return
 	_setRandom_Nav_target_Pos()
 	
