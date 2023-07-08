@@ -46,12 +46,11 @@ func _physics_process(delta):
 # Set the color of the mouse light based on distance to player
 func color_by_danger():
 	# how far is the player from me
-	var player = get_node("../player")
+	var player = $"../player"
 	var my_position = global_transform.origin
 	var player_position = player.global_transform.origin
 	var d = my_position.distance_to(player_position)
 	var gradientPosition = d / 500
-	print(d)
 	dangerLightLeft.color = grad.sample(gradientPosition)
 	dangerLightRight.color = grad.sample(gradientPosition)
 
@@ -64,7 +63,15 @@ func _on_destruction_zone_body_entered(body):
 func _on_vision_body_entered(body):
 	if body == self: return
 	if body is CharacterBody2D:
-		_on_spooked()
+		var space_state = get_world_2d().direct_space_state
+		var player = get_node("../player")
+		var my_position = global_transform.origin
+		var player_position = player.global_transform.origin
+		var query = PhysicsRayQueryParameters2D.create(my_position, player_position)
+		var result = space_state.intersect_ray(query)
+		print(result)
+		if result.collider == player:
+			_on_spooked()
 
 
 func _on_spooked(min = 1.0, max = 2.0):

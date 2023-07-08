@@ -6,7 +6,7 @@ const is_destroyable = true
 
 var dead = false
 
-@export var speed = 400
+@export var speed = 200
 
 # Called when the node enters the scene tree for the first time.
 func get_input():
@@ -28,7 +28,7 @@ func _physics_process(delta):
 func destroy():
 	dead = true
 	$Sprite2D.visible = false
-	$FlatRat.visible = true
+	$DeathSprite.visible = true
 	call_deferred("_no_collide")
 
 
