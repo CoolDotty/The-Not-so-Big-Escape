@@ -1,5 +1,6 @@
 extends Node
 
+@onready var packed_scene = null
 @onready var current_scene = get_child(0)
 
 
@@ -10,11 +11,31 @@ var trans_out = preload("res://scenes/DiamondTransitionOut.tres")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.scene_ended.connect(_change_scenes)
+	Global.player_died.connect(_u_sux)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	var game_over = $DeathLayer.visible
+	if game_over:
+		if Input.is_action_just_pressed("restart"):
+			Global.scene_ended.emit(packed_scene)
+
+
+func _u_sux(player):
+	var new_cam = Camera2D.new()
+	new_cam.offset.x = -50
+	player.add_child(new_cam)
+	new_cam.make_current()
+	$DeathLayer.visible = true
+	for i in range(0, 60):
+		if (not is_instance_valid(new_cam)): return
+		$DeathLayer/ColorRect.material.set_shader_parameter(
+			"right",
+			min(1.435, $DeathLayer/ColorRect.material.get_shader_parameter("right") + (1.0 / 60) * 5.0)
+		)
+		new_cam.zoom = new_cam.zoom.lerp(Vector2(5, 5), 0.1)
+		await get_tree().physics_frame
 
 
 func _change_scenes(next_scene: PackedScene):
@@ -28,7 +49,10 @@ func _change_scenes(next_scene: PackedScene):
 		)
 		await get_tree().physics_frame
 	
+	$DeathLayer.visible = false
 	current_scene.queue_free()
+	packed_scene = next_scene
+	await get_tree().physics_frame
 	current_scene = next_scene.instantiate()
 	add_child(current_scene)
 	

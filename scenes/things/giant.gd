@@ -45,7 +45,33 @@ var _current_action_state: _action_state = _action_state.none
 
 func _ready():
 	_navAgent.set_navigation_map(_map)
+	# white floor tile
 	avaliableTiles = _map.get_used_cells_by_id(0,0,Vector2i(1,0))
+	# Blue Grass
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(0,3)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(1,3)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(2,3)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(0,4)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(1,4)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(2,4)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(0,5)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(1,5)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(2,5)))
+	# Green Grass
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(0,6)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(1,6)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(2,6)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(0,7)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(1,7)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(2,7)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(0,8)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(1,8)))
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(2,8)))
+	# Blue Rat Bush
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(1,0)))
+	# Green Rat Bush
+	avaliableTiles.append_array(_map.get_used_cells_by_id(0,1,Vector2i(0,0)))
+	assert(len(avaliableTiles), "No avaliable tiles for elephant to use ??")
 	Global.mouse_squeaked.connect(
 		func(mouse):
 			_explore_location = mouse.global_transform.origin
@@ -228,9 +254,7 @@ func _check_NavStuck(location: Vector2):
 	return false
 
 func _setRandom_Nav_target_Pos():
-	var rng = RandomNumberGenerator.new()
-	var rndAvaliableTile = avaliableTiles[rng.randi_range(0,avaliableTiles.size()-1)]
-	_navAgent.target_position = _map.map_to_local(rndAvaliableTile)
+	_navAgent.target_position = _map.map_to_local(avaliableTiles.pick_random())
 
 func _on_nav_stuck_timer_timeout():
 	if (_current_action_state == _action_state.is_agro or _current_action_state == _action_state.is_agro_windup):
