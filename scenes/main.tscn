@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_ekuea"]
 [ext_resource type="PackedScene" uid="uid://5ly1ys5qnvpl" path="res://scenes/storymode/stories/Prologue.tscn" id="2_wmv87"]
-[ext_resource type="Material" uid="uid://kftccpekp3k8" path="res://scenes/Sawtooth.tres" id="3_ymj2n"]
+[ext_resource type="Material" uid="uid://kyd2se2nc8qq" path="res://scenes/Sawtooth.tres" id="3_ymj2n"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ekuea")

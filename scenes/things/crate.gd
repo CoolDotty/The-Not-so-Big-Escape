@@ -11,14 +11,21 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _physics_process(delta):
+	if dying:
+		var f = $Sprite2D.frame + 1
+		if f >= $Sprite2D.hframes:
+			queue_free()
+		else:
+			$Sprite2D.frame = f
 
 func _no_collide():
 	$CollisionShape2D.disabled = true
 
+var dying = false
+
 func destroy():
+	if dying: return
 	call_deferred("_no_collide")
-	$Animate.current_animation = "boom"
-	$Animate.play()
-	$Animate.animation_finished.connect(func(_name): self.queue_free(), CONNECT_ONE_SHOT)
+	dying = true
+	$LightOccluder2D.queue_free()

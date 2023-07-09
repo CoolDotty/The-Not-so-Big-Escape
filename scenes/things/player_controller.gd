@@ -29,6 +29,10 @@ func _physics_process(delta):
 	if dead: return
 	_check_interactable_inRange()
 	get_input()
+	
+	if velocity.length() > 1:
+		$Sprite2D.frame = ($Sprite2D.frame + 1) % $Sprite2D.hframes
+	
 	move_and_slide()
 	pass
 
