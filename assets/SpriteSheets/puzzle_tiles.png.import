@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cencfxxabr5ed"
-path="res://.godot/imported/Elephant Sprite Sheet.png-99218125f499bc871580373fcbea71cb.ctex"
+uid="uid://b56dj1jny1krv"
+path="res://.godot/imported/puzzle_tiles.png-7a235d5964bcabc5bac62a4d76ac4915.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Elephant Sprite Sheet.png"
-dest_files=["res://.godot/imported/Elephant Sprite Sheet.png-99218125f499bc871580373fcbea71cb.ctex"]
+source_file="res://assets/SpriteSheets/puzzle_tiles.png"
+dest_files=["res://.godot/imported/puzzle_tiles.png-7a235d5964bcabc5bac62a4d76ac4915.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://30nj1afwwnel"
-path="res://.godot/imported/SmallDoor.png-81a91fad35a011a37e125d47441e9cac.ctex"
+uid="uid://ve5v545ihy8m"
+path="res://.godot/imported/Tile Map Forest Layer 2.png-e1a50681310e67b6cf3e4e06123ba97f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/SmallDoor.png"
-dest_files=["res://.godot/imported/SmallDoor.png-81a91fad35a011a37e125d47441e9cac.ctex"]
+source_file="res://assets/TileMaps/Tile Map Forest Layer 2.png"
+dest_files=["res://.godot/imported/Tile Map Forest Layer 2.png-e1a50681310e67b6cf3e4e06123ba97f.ctex"]
 
 [params]
 

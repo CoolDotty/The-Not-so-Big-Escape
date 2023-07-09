@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lklhrkwmybjf"
-path="res://.godot/imported/Mouse.png-88992a27d5310308e4283985b2f643dd.ctex"
+uid="uid://b881cqqhkpuf3"
+path="res://.godot/imported/TileMapLabCounters.png-fbdc5a7924969ec73b228a687bb1e948.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mouse.png"
-dest_files=["res://.godot/imported/Mouse.png-88992a27d5310308e4283985b2f643dd.ctex"]
+source_file="res://assets/TileMaps/TileMapLabCounters.png"
+dest_files=["res://.godot/imported/TileMapLabCounters.png-fbdc5a7924969ec73b228a687bb1e948.ctex"]
 
 [params]
 

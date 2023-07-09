@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfbvfw5u1u07d"
-path="res://.godot/imported/forestdoor.png-2849fb1ce064c20c5cbc3bd94ca07bca.ctex"
+path="res://.godot/imported/forestdoor.png-ac2da6c2ac0065b46d587fb41fb6fbb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/forestdoor.png"
-dest_files=["res://.godot/imported/forestdoor.png-2849fb1ce064c20c5cbc3bd94ca07bca.ctex"]
+source_file="res://assets/Interactable/forestdoor.png"
+dest_files=["res://.godot/imported/forestdoor.png-ac2da6c2ac0065b46d587fb41fb6fbb4.ctex"]
 
 [params]
 

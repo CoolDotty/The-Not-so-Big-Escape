@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp5w1gymnh2nj"
-path="res://.godot/imported/crateboom.png-3fe941a15155695adc02096e5fe30a2d.ctex"
+uid="uid://cie1ysgxan0ui"
+path="res://.godot/imported/icon.svg-fa5c46c1dbc3b6ba2b35ab8c40cc0a04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crateboom.png"
-dest_files=["res://.godot/imported/crateboom.png-3fe941a15155695adc02096e5fe30a2d.ctex"]
+source_file="res://assets/Misc_character_other/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-fa5c46c1dbc3b6ba2b35ab8c40cc0a04.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
