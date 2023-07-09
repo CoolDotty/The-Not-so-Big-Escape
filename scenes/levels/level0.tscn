@@ -42,7 +42,3 @@ position = Vector2(1046, 178)
 
 [node name="Interactable" parent="." instance=ExtResource("8_hp8hq")]
 position = Vector2(909, 115)
-
-[node name="level_exit" parent="." instance=ExtResource("8_c3imf")]
-position = Vector2(18, 289)
-next_scene = ExtResource("9_7rvxx")
