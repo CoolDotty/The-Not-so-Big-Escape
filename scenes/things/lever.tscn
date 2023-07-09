@@ -1,19 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvqbbiifh56wo"]
+[gd_scene load_steps=3 format=3 uid="uid://cvqbbiifh56wo"]
 
 [ext_resource type="Script" path="res://scenes/things/lever.gd" id="1_adlln"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ynd5x"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oafm7"]
-
-[node name="Interactable" type="Node2D"]
+[node name="lever" type="Node2D"]
 script = ExtResource("1_adlln")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_ynd5x")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(10.725, 10.725)
-texture = SubResource("PlaceholderTexture2D_oafm7")

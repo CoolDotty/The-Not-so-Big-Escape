@@ -78,7 +78,7 @@ func _interact():
 		hitActor = _interact_Comp.get_collider(i).get_owner()
 		if(hitActor == null): continue
 		if(hitActor is Interactable):
-			hitActor._on_interact()
+			hitActor._on_interact(self)
 			Player_interacting_notify.emit()
 	
 func _check_interactable_inRange():
