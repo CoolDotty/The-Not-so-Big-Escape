@@ -1,17 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://nloq0ytddcj"]
+[gd_scene load_steps=15 format=3 uid="uid://nloq0ytddcj"]
 
 [ext_resource type="PackedScene" uid="uid://dapbbrcphrkey" path="res://scenes/levels/lighting_test.tscn" id="1_mpkfx"]
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="2_lo7j4"]
-[ext_resource type="PackedScene" uid="uid://bjlip7kbrmme4" path="res://assets/TileMaps/forest_layer_2_tiles_2.tscn" id="3_x0xo6"]
+[ext_resource type="PackedScene" uid="uid://5nt51w7o6rtf" path="res://assets/TileMaps/forest_layer_2_tiles_2.tscn" id="3_x0xo6"]
 [ext_resource type="PackedScene" uid="uid://bj70cqbd3i2vw" path="res://scenes/things/giant.tscn" id="4_0l8t5"]
 [ext_resource type="PackedScene" uid="uid://bday1l4lbsckq" path="res://assets/TileMaps/tile_map_lab_tiles.tscn" id="4_2hmt3"]
-[ext_resource type="PackedScene" uid="uid://c74yswrtojvlj" path="res://assets/TileMaps/valves_tiles.tscn" id="5_6nxwx"]
+[ext_resource type="PackedScene" uid="uid://crv1a65lmbey3" path="res://assets/TileMaps/valves_tiles.tscn" id="5_6nxwx"]
 [ext_resource type="PackedScene" uid="uid://b36kwhhp5uto0" path="res://scenes/things/player.tscn" id="6_vsteu"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="7_wlsns"]
+[ext_resource type="PackedScene" uid="uid://csh0es2febnbu" path="res://scenes/things/crate.tscn" id="9_774xl"]
+[ext_resource type="PackedScene" uid="uid://dwciwy7unj70r" path="res://scenes/things/level_exit.tscn" id="10_sif4s"]
+[ext_resource type="PackedScene" uid="uid://ckru5f2h05tp3" path="res://scenes/things/Door_open.tscn" id="11_s2lqn"]
+[ext_resource type="PackedScene" uid="uid://cr84yd28blu11" path="res://scenes/things/pressurePlate.tscn" id="12_tj7m6"]
+[ext_resource type="Texture2D" uid="uid://u2e5h6vhckqh" path="res://scenes/things/PurpleShroom.png" id="13_n0p7i"]
+[ext_resource type="Texture2D" uid="uid://4iuleixn8aoo" path="res://scenes/things/RedPlate.png" id="14_c2am7"]
 
 [node name="level0" type="Node2D"]
 
 [node name="lighting" parent="." instance=ExtResource("1_mpkfx")]
+visible = false
 
 [node name="puzzle_tiles" parent="." instance=ExtResource("2_lo7j4")]
 z_index = -1
@@ -21,7 +28,7 @@ layer_0/tile_data = PackedInt32Array(65536, 1, 3, 131072, 1, 4, 196608, 1, 4, 26
 layer_0/tile_data = PackedInt32Array(65537, 65536, 0, 196610, 65536, 0, 131082, 65536, 0, 524298, 65536, 0, 65544, 0, 2, 524295, 0, 2, 196613, 131072, 1)
 
 [node name="TileMapLab_tiles" parent="." instance=ExtResource("4_2hmt3")]
-layer_0/tile_data = PackedInt32Array(327687, 131072, 0, 262152, 65536, 1, 327688, 0, 2, 393224, 131072, 2, 196617, 262144, 1, 262153, 262144, 1, 327689, 65536, 4, 393225, 262144, 1, 458761, 262144, 1, 196618, 262144, 1, 262154, 0, 1, 327690, 0, 1, 393226, 0, 1, 458762, 262144, 1, 11, 262144, 1, 65547, 262144, 1, 131083, 262144, 1, 196619, 262144, 1, 262155, 0, 1, 327691, 0, 1, 393227, 0, 1, 458763, 262144, 1, 524299, 262144, 1, 589835, 262144, 1, 655371, 262144, 1, 12, 262144, 1, 131084, 0, 5, 196620, 131072, 6, 262156, 0, 1, 327692, 0, 3, 458764, 0, 1, 524300, 0, 1, 589836, 0, 1, 655372, 262144, 1, 13, 262144, 1, 65549, 0, 1, 131085, 0, 5, 196621, 0, 1, 262157, 0, 3, 524301, 0, 1, 589837, 131072, 1, 655373, 262144, 1, 14, 262144, 1, 393230, 0, 1, 458766, 262144, 1, 524302, 0, 1, 589838, 0, 1, 655374, 262144, 1, 15, 262144, 1, 131087, 131072, 0, 196623, 0, 1, 262159, 0, 1, 327695, 65536, 1, 393231, 0, 1, 458767, 0, 1, 524303, 0, 1, 589839, 0, 1, 655375, 262144, 1, 65552, 262144, 1, 131088, 65536, 4, 196624, 262144, 1, 262160, 262144, 1, 327696, 262144, 1, 393232, 262144, 1, 458768, 262144, 1, 524304, 262144, 1, 589840, 262144, 1, 655376, 262144, 1, 16, 262144, 1, 65551, 0, 3, 65550, 0, 1, 131086, 0, 1, 196622, 0, 1, 262158, 0, 1, 327694, 0, 1, 327693, 0, 3, 393229, 0, 1, 458765, 0, 1)
+layer_0/tile_data = PackedInt32Array(262152, 65536, 1, 327688, 0, 2, 393224, 131072, 2, 196617, 262144, 1, 262153, 262144, 1, 393225, 262144, 1, 458761, 262144, 1, 196618, 262144, 1, 262154, 0, 1, 327690, 0, 1, 393226, 0, 1, 458762, 262144, 1, 11, 262144, 1, 65547, 262144, 1, 131083, 262144, 1, 196619, 262144, 1, 262155, 0, 1, 327691, 0, 1, 393227, 0, 1, 458763, 262144, 1, 524299, 262144, 1, 589835, 262144, 1, 655371, 262144, 1, 12, 262144, 1, 131084, 0, 5, 196620, 131072, 6, 262156, 0, 1, 458764, 0, 1, 524300, 0, 1, 589836, 0, 1, 655372, 262144, 1, 13, 262144, 1, 65549, 0, 1, 131085, 0, 5, 196621, 0, 1, 524301, 0, 1, 589837, 131072, 1, 655373, 262144, 1, 14, 262144, 1, 393230, 0, 1, 458766, 262144, 1, 524302, 0, 1, 589838, 0, 1, 655374, 262144, 1, 15, 262144, 1, 196623, 0, 1, 262159, 0, 1, 327695, 65536, 1, 393231, 0, 1, 458767, 0, 1, 524303, 0, 1, 589839, 0, 1, 655375, 262144, 1, 65552, 262144, 1, 196624, 262144, 1, 262160, 262144, 1, 327696, 262144, 1, 393232, 262144, 1, 458768, 262144, 1, 524304, 262144, 1, 589840, 262144, 1, 655376, 262144, 1, 16, 262144, 1, 65550, 0, 1, 131086, 0, 1, 196622, 0, 1, 262158, 0, 1, 327694, 0, 1, 393229, 0, 1, 458765, 0, 1)
 
 [node name="TileMapLab_tiles" parent="TileMapLab_tiles" instance=ExtResource("4_2hmt3")]
 layer_0/z_index = -1
@@ -89,3 +96,36 @@ shadow_enabled = true
 texture = ExtResource("7_wlsns")
 texture_scale = 4.0
 height = 10.0
+
+[node name="crate" parent="." instance=ExtResource("9_774xl")]
+position = Vector2(864, 289)
+
+[node name="crate2" parent="." instance=ExtResource("9_774xl")]
+position = Vector2(865, 357)
+
+[node name="crate3" parent="." instance=ExtResource("9_774xl")]
+position = Vector2(802, 356)
+
+[node name="crate4" parent="." instance=ExtResource("9_774xl")]
+position = Vector2(994, 100)
+
+[node name="level_exit" parent="." node_paths=PackedStringArray("Triggers") instance=ExtResource("10_sif4s")]
+position = Vector2(1059, 160)
+Triggers = [NodePath("../pressurePlate2")]
+require_triggers_to_open = 1
+
+[node name="Door_open" parent="." node_paths=PackedStringArray("Triggers") instance=ExtResource("11_s2lqn")]
+position = Vector2(607, 350)
+Triggers = [NodePath("../pressurePlate")]
+
+[node name="pressurePlate" parent="." instance=ExtResource("12_tj7m6")]
+position = Vector2(478, 357)
+
+[node name="Sprite2D" type="Sprite2D" parent="pressurePlate"]
+texture = ExtResource("13_n0p7i")
+
+[node name="pressurePlate2" parent="." instance=ExtResource("12_tj7m6")]
+position = Vector2(993, 159)
+
+[node name="Sprite2D" type="Sprite2D" parent="pressurePlate2"]
+texture = ExtResource("14_c2am7")
