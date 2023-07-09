@@ -12,7 +12,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	print($Sprite2D.frame)
 	if dying:
 		var f = $Sprite2D.frame + 1
 		if f > $Sprite2D.hframes:
