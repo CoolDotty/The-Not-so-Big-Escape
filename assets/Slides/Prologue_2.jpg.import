@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n0r0dhvnwf4b"
-path="res://.godot/imported/elephant_sprite_sheet_normalmap.png-7492fda3ca13b2571312ea5b918b7453.ctex"
+uid="uid://11qq4sk3oguh"
+path="res://.godot/imported/Prologue_2.jpg-c2f21d16a34b97dd8cc1c520e0bf8e35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/elephant_sprite_sheet_normalmap.png"
-dest_files=["res://.godot/imported/elephant_sprite_sheet_normalmap.png-7492fda3ca13b2571312ea5b918b7453.ctex"]
+source_file="res://assets/Slides/Prologue_2.jpg"
+dest_files=["res://.godot/imported/Prologue_2.jpg-c2f21d16a34b97dd8cc1c520e0bf8e35.ctex"]
 
 [params]
 

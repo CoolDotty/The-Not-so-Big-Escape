@@ -21,7 +21,7 @@ NORMAL = 2.0 * texture(normal_map, UV).rgb - 1.0;
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vo7a6"]
 shader = SubResource("Shader_omgl8")
-shader_parameter/normal_map = ExtResource("3_sdo0o")
+shader_parameter/normal_map = ExtResource("2_jeatc")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f7jqg"]
 radius = 15.0
@@ -53,8 +53,10 @@ height = 10.0
 
 [node name="DeathSprite" type="Sprite2D" parent="."]
 visible = false
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_etf2t")
+scale = Vector2(0.64375, 0.64375)
+texture = ExtResource("5_lj54y")
+hframes = 3
+frame = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

@@ -12,13 +12,15 @@ var shake = 0.0
 
 var time = 0.0
 
+var saved_position
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	await get_tree().process_frame
 	_next_frame(null)
 	DialogueManager.dialogue_ended.connect(_next_frame)
 	
-	anchors_preset = PRESET_FULL_RECT
+	saved_position = position
 
 
 func _process(delta):
@@ -28,16 +30,19 @@ func _process(delta):
 		time += delta
 		var zom = max(scale.x - 0.1, 1.1)
 		scale = Vector2(zom, zom)
+	else:
+		scale = Vector2(1,1)
 	
 	if s.effect == Slide.FX.Rock:
 		time += delta
 		rotation = sin(time * 5) / 20
 	
 	if s.effect == Slide.FX.Shake:
-		position = Vector2(randf_range(-shake, shake), randf_range(-shake, shake))
+		position = Vector2(saved_position.x+randf_range(-shake, shake), saved_position.y+randf_range(-shake, shake))
 		shake = max(shake - 0.5, 0.0)
 	else:
 		shake = 0.0
+		position = saved_position
 
 
 func _next_frame(resource):
