@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjlip7kbrmme4"]
+[gd_scene load_steps=4 format=3 uid="uid://5nt51w7o6rtf"]
 
 [ext_resource type="Texture2D" uid="uid://ve5v545ihy8m" path="res://assets/TileMaps/Tile Map Forest Layer 2.png" id="1_pxq55"]
 
@@ -8,11 +8,11 @@ texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14.9333, -10.6667, -2.13333, -14.9333, 10.6667, -10.6667, 14.9333, 2.13334, 10.6667, 14.9333, -2.13333, 19.2, -14.9333, 14.9333, -19.2, 2.13334)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14.9333, -10.6667, -2.13333, -14.9333, 10.6667, -10.6667, 14.9333, 2.13334, 10.6667, 14.9333, -2.13333, 19.2, -14.9333, 14.9333, -19.2, 2.13334)
 2:0/0 = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0

@@ -146,22 +146,23 @@ func _on_spooked(min = 1.0, max = 2.0):
 	var SpookTimer = $vision/StateTimer
 	var rng = RandomNumberGenerator.new()
 	var spook_random_number = rng.randf_range(min, max)
-	SpookTimer.set_wait_time(spook_random_number)
-	SpookTimer.start()
+	#SpookTimer.set_wait_time(spook_random_number)
+	#SpookTimer.start()
 	
 func _on_alerted():
 	var SpookTimer = $vision/StateTimer
 	var rng = RandomNumberGenerator.new()
 	var spook_random_number = rng.randf_range(2.0, 3.0)
-	SpookTimer.set_wait_time(spook_random_number)
-	SpookTimer.start()
+	#SpookTimer.set_wait_time(spook_random_number)
+	#SpookTimer.start()
 
 func _on_spook_timer_timeout():
 	is_spooked = false
 	player = null
-	if (_current_action_state == _action_state.is_agro or _current_action_state == _action_state.is_agro_windup):
+	if (_current_action_state == _action_state.is_agro_windup):
 		return
 	Set_action_state(_action_state.is_patrolling)
+	_setRandom_Nav_target_Pos()
 
 func _explore_sound_source(location:Vector2):
 	var temp_direction: Vector2
@@ -248,7 +249,7 @@ func _agro_windup(delta):
 var _last_record_loc = Vector2(0.0,0.0)
 func _check_NavStuck(location: Vector2):
 	var dist = location.distance_to(_last_record_loc)
-	if(dist > 1.0):
+	if(dist > 0.5):
 		_last_record_loc = location
 		return true
 	return false
