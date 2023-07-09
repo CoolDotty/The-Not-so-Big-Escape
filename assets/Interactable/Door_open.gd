@@ -3,6 +3,7 @@ extends Area2D
 
 @export var opening : bool
 @export var Triggers: Array[Interactable]
+@export var Target_Instagators: Array[CharacterBody2D]
 @export var require_triggers_to_open: int
 
 # Called when the node enters the scene tree for the first time.
@@ -27,7 +28,7 @@ func _on_body_entered(body):
 
 
 func Interacted(Instigator, trigger : Interactable):
-	if(Instigator == $"../player"):
+	if(Target_Instagators.has(Instigator)):
 		trigger.on_interact.disconnect(Interacted)
 		require_triggers_to_open = require_triggers_to_open - 1
 		if(require_triggers_to_open <= 0):
