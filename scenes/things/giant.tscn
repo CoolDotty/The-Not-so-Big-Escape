@@ -4,11 +4,23 @@
 [ext_resource type="Gradient" uid="uid://b25go6dawksdg" path="res://scenes/things/mouse_danger_gradient.tres" id="2_c2xdt"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="3_sq0nk"]
 [ext_resource type="Texture2D" uid="uid://dc0hdxfiuunid" path="res://assets/Mouse_game_jam_sprite_sheet.png" id="3_t5kt3"]
-[ext_resource type="Shader" path="res://scenes/things/giantanimatednormalmap.gdshader" id="3_yhclw"]
 [ext_resource type="Texture2D" uid="uid://ddr7yi2olq7gu" path="res://assets/Mouse_game_jam_sprite_sheet_normal_map.png" id="4_wpbgu"]
 
+[sub_resource type="Shader" id="Shader_omgl8"]
+code = "// Mandatory line to define 2D shaders
+shader_type canvas_item;
+
+// Allows us to assign a normal map to the shader in the Inspector
+uniform sampler2D normal_map;
+
+void fragment(){
+	// Converts the texture data into a unit vector, with each channel in the [-1, 1] range
+
+NORMAL = 2.0 * texture(normal_map, UV).rgb - 1.0;
+}"
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jk2xs"]
-shader = ExtResource("3_yhclw")
+shader = SubResource("Shader_omgl8")
 shader_parameter/normal_map = ExtResource("4_wpbgu")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ysp3"]

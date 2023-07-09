@@ -1,14 +1,26 @@
 [gd_scene load_steps=10 format=3 uid="uid://b36kwhhp5uto0"]
 
 [ext_resource type="Script" path="res://scenes/things/player_controller.gd" id="1_y7elc"]
-[ext_resource type="Shader" path="res://scenes/things/giantanimatednormalmap.gdshader" id="2_o1noy"]
 [ext_resource type="Texture2D" uid="uid://cencfxxabr5ed" path="res://assets/Elephant Sprite Sheet.png" id="2_r556u"]
 [ext_resource type="Texture2D" uid="uid://n0r0dhvnwf4b" path="res://assets/elephant_sprite_sheet_normalmap.png" id="3_sdo0o"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="4_gfdkj"]
-[ext_resource type="Texture2D" uid="uid://bbb5iglus4x38" path="res://assets/elephantpankake.png" id="4_kmn8f"]
+[ext_resource type="Texture2D" uid="uid://bsri3pbifm4eq" path="res://assets/flatrat.png" id="5_etf2t"]
+
+[sub_resource type="Shader" id="Shader_omgl8"]
+code = "// Mandatory line to define 2D shaders
+shader_type canvas_item;
+
+// Allows us to assign a normal map to the shader in the Inspector
+uniform sampler2D normal_map;
+
+void fragment(){
+	// Converts the texture data into a unit vector, with each channel in the [-1, 1] range
+
+NORMAL = 2.0 * texture(normal_map, UV).rgb - 1.0;
+}"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vo7a6"]
-shader = ExtResource("2_o1noy")
+shader = SubResource("Shader_omgl8")
 shader_parameter/normal_map = ExtResource("3_sdo0o")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f7jqg"]
@@ -41,13 +53,10 @@ height = 10.0
 
 [node name="DeathSprite" type="Sprite2D" parent="."]
 visible = false
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("4_kmn8f")
-hframes = 3
-frame = 1
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_etf2t")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
 
 [node name="ShapeCast2D" type="ShapeCast2D" parent="."]
 position = Vector2(20.155, 0)
