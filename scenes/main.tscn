@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_ekuea"]
 [ext_resource type="PackedScene" uid="uid://5ly1ys5qnvpl" path="res://scenes/storymode/stories/Prologue.tscn" id="2_wmv87"]
 [ext_resource type="Material" uid="uid://kyd2se2nc8qq" path="res://scenes/Sawtooth.tres" id="3_ymj2n"]
-[ext_resource type="Texture2D" uid="uid://c5vjf128a4ikw" path="res://assets/Mouse death screen.png" id="4_h3min"]
+[ext_resource type="Texture2D" uid="uid://c5vjf128a4ikw" path="res://assets/Slides/Mouse death screen.png" id="4_8jgbl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vmxvr"]
 outline_size = 10
@@ -13,6 +13,8 @@ outline_color = Color(0, 0, 0, 1)
 script = ExtResource("1_ekuea")
 
 [node name="Prologue" parent="." instance=ExtResource("2_wmv87")]
+offset_left = 256.0
+offset_right = -248.0
 
 [node name="DeathLayer" type="CanvasLayer" parent="."]
 visible = false
@@ -28,7 +30,7 @@ offset_right = 5.0
 offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_h3min")
+texture = ExtResource("4_8jgbl")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="DeathLayer"]

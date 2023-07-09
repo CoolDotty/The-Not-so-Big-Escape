@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://kyd2se2nc8qq"]
 
-[ext_resource type="Texture2D" uid="uid://c5vjf128a4ikw" path="res://assets/Mouse death screen.png" id="1_ygxto"]
+[ext_resource type="Texture2D" uid="uid://c5vjf128a4ikw" path="res://assets/Slides/Mouse death screen.png" id="1_ygxto"]
 
 [sub_resource type="Shader" id="Shader_gpnim"]
 code = "/*

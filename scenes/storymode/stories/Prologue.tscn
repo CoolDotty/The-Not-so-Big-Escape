@@ -1,43 +1,55 @@
-[gd_scene load_steps=12 format=3 uid="uid://5ly1ys5qnvpl"]
+[gd_scene load_steps=14 format=3 uid="uid://5ly1ys5qnvpl"]
 
 [ext_resource type="Script" path="res://scenes/storymode/story.gd" id="1_wxd5w"]
-[ext_resource type="Texture2D" uid="uid://df1xunllu05nd" path="res://assets/crate.png" id="2_yvwi6"]
+[ext_resource type="Texture2D" uid="uid://or7oo274n3u" path="res://assets/Slides/Prologue_1.jpg" id="2_rr7nc"]
 [ext_resource type="Script" path="res://scenes/storymode/slide.gd" id="3_ss7hs"]
-[ext_resource type="Texture2D" uid="uid://3avfbwrnd7fg" path="res://assets/Mouse_normal.png" id="5_owpbs"]
-[ext_resource type="Texture2D" uid="uid://bsri3pbifm4eq" path="res://assets/flatrat.png" id="5_tdp7g"]
-[ext_resource type="Texture2D" uid="uid://bp5w1gymnh2nj" path="res://assets/crateboom.png" id="6_8f2qk"]
+[ext_resource type="Texture2D" uid="uid://11qq4sk3oguh" path="res://assets/Slides/Prologue_2.jpg" id="4_ay02b"]
+[ext_resource type="Texture2D" uid="uid://du5w6nynfnd68" path="res://assets/Slides/Prologue_3.jpg" id="5_3bgex"]
+[ext_resource type="Texture2D" uid="uid://cugtnkc4wmf5m" path="res://assets/Slides/Prologue_4.jpg" id="6_63fjr"]
+[ext_resource type="Texture2D" uid="uid://cq5hxld612syl" path="res://assets/Slides/Prologue_5.jpg" id="7_0ppug"]
 [ext_resource type="PackedScene" uid="uid://bg2qbdffcvl47" path="res://scenes/levels/Outside_0.tscn" id="7_wj2mj"]
 
 [sub_resource type="Resource" id="Resource_a85eo"]
 script = ExtResource("3_ss7hs")
-pic = ExtResource("2_yvwi6")
-text = "Crate is GR8"
+pic = ExtResource("2_rr7nc")
+text = "\"...and just past here is the sterling fountain! The lab designed this fountain to gush pure water for you Whiskers! Lets take a si-\""
 effect = 0
 
 [sub_resource type="Resource" id="Resource_tfhpy"]
 script = ExtResource("3_ss7hs")
-pic = ExtResource("5_tdp7g")
-text = "Rat is Flat"
+pic = ExtResource("4_ay02b")
+text = "
+"
 effect = 1
 
 [sub_resource type="Resource" id="Resource_ka4bq"]
 script = ExtResource("3_ss7hs")
-pic = ExtResource("5_owpbs")
-text = "mouse on Drugzzzz"
-effect = 2
+pic = ExtResource("5_3bgex")
+text = "“No, no, no! THE FOREST! Quick, you need to close the main valve! I have to try and stop the stream from reaching further downhill!
+“The water for sure is coming from that building. There should be a valve inside. Find it and turn it off! I know you can do it. Save the forest! Also, mind Trunks!\"
+"
+effect = 0
 
 [sub_resource type="Resource" id="Resource_qh3u0"]
 script = ExtResource("3_ss7hs")
-pic = ExtResource("6_8f2qk")
-text = "OMG EXPLOSION"
+pic = ExtResource("6_63fjr")
+text = ""
 effect = 3
+
+[sub_resource type="Resource" id="Resource_aolxs"]
+script = ExtResource("3_ss7hs")
+pic = ExtResource("7_0ppug")
+text = ""
+effect = 2
 
 [node name="Prologue" type="TextureRect"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -118.0
 grow_horizontal = 2
 grow_vertical = 2
+expand_mode = 1
 script = ExtResource("1_wxd5w")
-slides = Array[ExtResource("3_ss7hs")]([SubResource("Resource_a85eo"), SubResource("Resource_tfhpy"), SubResource("Resource_ka4bq"), SubResource("Resource_qh3u0")])
+slides = Array[ExtResource("3_ss7hs")]([SubResource("Resource_a85eo"), SubResource("Resource_tfhpy"), SubResource("Resource_ka4bq"), SubResource("Resource_qh3u0"), SubResource("Resource_aolxs")])
 next_scene = ExtResource("7_wj2mj")
