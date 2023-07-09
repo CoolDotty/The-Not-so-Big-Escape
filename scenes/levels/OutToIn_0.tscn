@@ -35,7 +35,7 @@ position = Vector2(616, 89)
 rotation = 1.5708
 
 [node name="player" parent="." instance=ExtResource("6_vsteu")]
-position = Vector2(712, 344)
+position = Vector2(79, 372)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(158, 228)
