@@ -45,11 +45,11 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_f7jqg")
 
 [node name="PlayerLight2D" type="PointLight2D" parent="."]
-energy = 0.1
+energy = 0.2
 shadow_enabled = true
 texture = ExtResource("4_gfdkj")
-texture_scale = 0.3
-height = 10.0
+texture_scale = 0.5
+height = 20.0
 
 [node name="DeathSprite" type="Sprite2D" parent="."]
 visible = false
