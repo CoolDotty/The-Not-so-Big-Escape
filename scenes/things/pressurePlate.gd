@@ -1,4 +1,4 @@
-extends Area2D
+extends Interactable
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,4 +17,5 @@ func _on_body_entered(body):
 	#print("pressure plate!")
 	#add sound here
 	#add effect here
+	_on_interact(body)
 	pressurePlate_Active.emit(body)
