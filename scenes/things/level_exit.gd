@@ -32,5 +32,7 @@ func _on_body_entered(body):
 
 func Interacted(Instigator):
 	if(Instigator == $"../player"):
-		opening = true
+		require_triggers_to_open = require_triggers_to_open - 1
+		if(require_triggers_to_open <= 0):
+			opening = true
 	pass # Replace with function body.
