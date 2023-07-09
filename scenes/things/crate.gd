@@ -14,7 +14,7 @@ func _ready():
 func _physics_process(delta):
 	if dying:
 		var f = $Sprite2D.frame + 1
-		if f > $Sprite2D.hframes:
+		if f >= $Sprite2D.hframes:
 			queue_free()
 		else:
 			$Sprite2D.frame = f
