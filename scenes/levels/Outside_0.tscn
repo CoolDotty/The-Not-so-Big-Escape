@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://ch3wa83taymr0"]
+[gd_scene load_steps=11 format=3 uid="uid://df8thgcaxandl"]
 
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="1_567c3"]
 [ext_resource type="Texture2D" uid="uid://dpgtephvqr7tk" path="res://assets/NewTileMap.png" id="2_qo8tm"]
-[ext_resource type="PackedScene" path="res://scenes/things/giant.tscn" id="3_13hdh"]
+[ext_resource type="PackedScene" uid="uid://bj70cqbd3i2vw" path="res://scenes/things/giant.tscn" id="3_13hdh"]
 [ext_resource type="PackedScene" uid="uid://csh0es2febnbu" path="res://scenes/things/crate.tscn" id="4_qqmgc"]
 [ext_resource type="PackedScene" uid="uid://b36kwhhp5uto0" path="res://scenes/things/player.tscn" id="5_xda1w"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="6_dyth6"]
+[ext_resource type="PackedScene" uid="uid://c34tt84paekjm" path="res://scenes/things/level_exit.tscn" id="7_grpmv"]
+[ext_resource type="PackedScene" uid="uid://c3cp8fg74l6id" path="res://scenes/levels/Outside_1.tscn" id="8_rhi7x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5cdio"]
 texture = ExtResource("2_qo8tm")
@@ -126,3 +128,7 @@ energy = 0.5
 shadow_enabled = true
 texture = ExtResource("6_dyth6")
 height = 10.0
+
+[node name="level_exit" parent="." instance=ExtResource("7_grpmv")]
+position = Vector2(1562, 544)
+next_scene = ExtResource("8_rhi7x")

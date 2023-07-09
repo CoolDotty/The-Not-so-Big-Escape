@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scenes/storymode/story.gd" id="1_bp27r"]
 [ext_resource type="Texture2D" uid="uid://cie1ysgxan0ui" path="res://assets/icon.svg" id="2_mkvte"]
-[ext_resource type="PackedScene" uid="uid://tvuvhrdbxn7b" path="res://scenes/levels/Greybox.tscn" id="2_r87au"]
 [ext_resource type="Script" path="res://scenes/storymode/slide.gd" id="3_ghj7l"]
+[ext_resource type="PackedScene" uid="uid://df8thgcaxandl" path="res://scenes/levels/Outside_0.tscn" id="4_0w6oo"]
 
 [sub_resource type="Resource" id="Resource_vt6ep"]
 script = ExtResource("3_ghj7l")
@@ -14,4 +14,4 @@ effect = 0
 [node name="Test" type="TextureRect"]
 script = ExtResource("1_bp27r")
 slides = Array[ExtResource("3_ghj7l")]([SubResource("Resource_vt6ep")])
-next_scene = ExtResource("2_r87au")
+next_scene = ExtResource("4_0w6oo")

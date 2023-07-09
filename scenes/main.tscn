@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://bctkgwmdbh354"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_ekuea"]
-[ext_resource type="PackedScene" uid="uid://5ly1ys5qnvpl" path="res://scenes/storymode/stories/Prologue.tscn" id="3_dimiw"]
+[ext_resource type="PackedScene" uid="uid://5ly1ys5qnvpl" path="res://scenes/storymode/stories/Prologue.tscn" id="2_wmv87"]
 [ext_resource type="Material" uid="uid://kftccpekp3k8" path="res://scenes/Sawtooth.tres" id="3_ymj2n"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ekuea")
 
-[node name="Prologue" parent="." instance=ExtResource("3_dimiw")]
+[node name="Prologue" parent="." instance=ExtResource("2_wmv87")]
 
 [node name="DeathLayer" type="CanvasLayer" parent="."]
 visible = false

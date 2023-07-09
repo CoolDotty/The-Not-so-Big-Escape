@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c34tt84paekjm"]
+
+[ext_resource type="Script" path="res://scenes/things/level_exit.gd" id="1_ctymp"]
+[ext_resource type="Texture2D" uid="uid://cie1ysgxan0ui" path="res://assets/icon.svg" id="1_kxjnl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvs7v"]
+size = Vector2(64, 64)
+
+[node name="level_exit" type="Area2D"]
+script = ExtResource("1_ctymp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hvs7v")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kxjnl")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
