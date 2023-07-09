@@ -24,15 +24,15 @@ func _process(delta):
 
 func _u_sux(player):
 	var new_cam = Camera2D.new()
-	new_cam.offset.x = -50
+	new_cam.offset.x = 50
 	player.add_child(new_cam)
 	new_cam.make_current()
 	$DeathLayer.visible = true
-	for i in range(0, 60):
-		if (not is_instance_valid(new_cam)): return
+	for i in range(0, 120):
+		#if (not is_instance_valid(new_cam)): return
 		$DeathLayer/ColorRect.material.set_shader_parameter(
 			"right",
-			min(1.435, $DeathLayer/ColorRect.material.get_shader_parameter("right") + (1.0 / 60) * 5.0)
+			-1.0 + ((i / 120.0) * 4.0)
 		)
 		new_cam.zoom = new_cam.zoom.lerp(Vector2(5, 5), 0.1)
 		await get_tree().physics_frame

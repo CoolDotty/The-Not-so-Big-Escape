@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bctkgwmdbh354"]
+[gd_scene load_steps=6 format=3 uid="uid://bctkgwmdbh354"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_ekuea"]
 [ext_resource type="PackedScene" uid="uid://5ly1ys5qnvpl" path="res://scenes/storymode/stories/Prologue.tscn" id="2_wmv87"]
 [ext_resource type="Material" uid="uid://kyd2se2nc8qq" path="res://scenes/Sawtooth.tres" id="3_ymj2n"]
+[ext_resource type="Texture2D" uid="uid://c5vjf128a4ikw" path="res://assets/Mouse death screen.png" id="4_h3min"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vmxvr"]
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ekuea")
@@ -12,23 +17,29 @@ script = ExtResource("1_ekuea")
 [node name="DeathLayer" type="CanvasLayer" parent="."]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="DeathLayer"]
+[node name="ColorRect" type="TextureRect" parent="DeathLayer"]
 material = ExtResource("3_ymj2n")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 313.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+texture = ExtResource("4_h3min")
+expand_mode = 1
 
 [node name="Label" type="Label" parent="DeathLayer"]
-offset_left = 28.0
-offset_top = 188.0
-offset_right = 439.0
-offset_bottom = 432.0
+offset_left = 398.0
+offset_top = 239.0
+offset_right = 809.0
+offset_bottom = 483.0
 text = "You Died
 
 Press R to restart"
+label_settings = SubResource("LabelSettings_vmxvr")
 horizontal_alignment = 1
 vertical_alignment = 1
 
