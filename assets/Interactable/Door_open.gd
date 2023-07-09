@@ -7,6 +7,7 @@ extends Node2D
 @export var Target_Instagators: Array[CharacterBody2D]
 @export var require_triggers_to_open: int
 
+@export var enableReplacingCurrentTile : bool
 @export var currentNav_map : TileMap
 @export var onOpen_override_layer : int
 @export var onOpen_override_sourceID : int
@@ -45,7 +46,8 @@ func Interacted(Instigator, trigger : Interactable):
 
 func Set_isDoorOpen(enable : bool):
 	opening = enable
-	updateCurrentNavTile(onOpen_override_layer, onOpen_override_sourceID, onOpen_override_atlas_coordinates)
+	if(enableReplacingCurrentTile):
+		updateCurrentNavTile(onOpen_override_layer, onOpen_override_sourceID, onOpen_override_atlas_coordinates)
 	call_deferred("_setCollisionDisable", enable)
 	
 func _setCollisionDisable(enable : bool):
