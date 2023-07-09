@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf2pgs018bf4l"
-path="res://.godot/imported/Mouse_game_jam_sprite_sheet_Old.png-c7f937b0adac93007ade3d4ce30d9dbf.ctex"
+uid="uid://cugtnkc4wmf5m"
+path="res://.godot/imported/Prologue_4.jpg-f8e6d152af4f507d41963818afb3a4e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mouse_game_jam_sprite_sheet_Old.png"
-dest_files=["res://.godot/imported/Mouse_game_jam_sprite_sheet_Old.png-c7f937b0adac93007ade3d4ce30d9dbf.ctex"]
+source_file="res://assets/Slides/Prologue_4.jpg"
+dest_files=["res://.godot/imported/Prologue_4.jpg-f8e6d152af4f507d41963818afb3a4e3.ctex"]
 
 [params]
 

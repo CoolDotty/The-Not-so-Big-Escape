@@ -1,4 +1,6 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://kyd2se2nc8qq"]
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://kyd2se2nc8qq"]
+
+[ext_resource type="Texture2D" uid="uid://c5vjf128a4ikw" path="res://assets/Slides/Mouse death screen.png" id="1_ygxto"]
 
 [sub_resource type="Shader" id="Shader_gpnim"]
 code = "/*
@@ -52,6 +54,7 @@ shader_parameter/saw_b_interval = 2.0
 shader_parameter/saw_a_scale = 1.0
 shader_parameter/saw_b_scale = 0.821
 shader_parameter/uv_scale = Vector2(3, 8)
-shader_parameter/color = Vector4(0, 0, 0, 1)
+shader_parameter/color = Vector4(1, 1, 1, 1)
 shader_parameter/right = -1.0
 shader_parameter/left = -1.0
+shader_parameter/tex = ExtResource("1_ygxto")
