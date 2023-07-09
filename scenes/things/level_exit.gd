@@ -30,8 +30,9 @@ func _on_body_entered(body):
 		Global.scene_ended.emit(next_scene)
 
 
-func Interacted(Instigator):
+func Interacted(Instigator, trigger : Interactable):
 	if(Instigator == $"../player"):
+		trigger.on_interact.disconnect(Interacted)
 		require_triggers_to_open = require_triggers_to_open - 1
 		if(require_triggers_to_open <= 0):
 			opening = true
