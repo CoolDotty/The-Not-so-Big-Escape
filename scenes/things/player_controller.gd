@@ -8,6 +8,8 @@ const is_destroyable = true
 var dead = false
 
 @export var speed = 200
+@export var frame_rate = 4
+var frame_counter = 0
 
 # Called when the node enters the scene tree for the first time.
 func get_input():
@@ -31,7 +33,11 @@ func _physics_process(delta):
 	get_input()
 	
 	if velocity.length() > 1:
+		frame_counter += 1
+		
+	if frame_counter >= frame_rate:
 		$Sprite2D.frame = ($Sprite2D.frame + 1) % $Sprite2D.hframes
+		frame_counter = 0
 	
 	move_and_slide()
 	pass
