@@ -2,14 +2,19 @@ extends Area2D
 
 
 @export var next_scene: PackedScene
-
+@export var opening : bool
+@export var Triggers: Array[Interactable]
+@export var require_triggers_to_open: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if(require_triggers_to_open <= 0): opening = true
+	for each_trigger in Triggers:
+		each_trigger.on_interact.connect(Interacted)
+	
 	pass # Replace with function body.
 
 
-var opening = false
 var f = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -19,7 +24,13 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body):
-	opening = true
+	if (not opening): return
 	if body.get("lore_name") == "Trunks":
 		assert(next_scene, "No next_scene assigned to exit")
 		Global.scene_ended.emit(next_scene)
+
+
+func Interacted(Instigator):
+	if(Instigator == $"../player"):
+		opening = true
+	pass # Replace with function body.

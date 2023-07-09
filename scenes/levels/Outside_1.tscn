@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://d0ma114qhbsb1"]
 
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="1_leps8"]
-[ext_resource type="PackedScene" uid="uid://crv1a65lmbey3" path="res://assets/TileMaps/valves_tiles.tscn" id="2_epokc"]
+[ext_resource type="PackedScene" path="res://assets/TileMaps/valves_tiles.tscn" id="2_epokc"]
 [ext_resource type="PackedScene" uid="uid://bj70cqbd3i2vw" path="res://scenes/things/giant.tscn" id="3_isyhl"]
 [ext_resource type="PackedScene" uid="uid://b36kwhhp5uto0" path="res://scenes/things/player.tscn" id="5_0fhlb"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="6_ukf0c"]
 [ext_resource type="PackedScene" uid="uid://dwciwy7unj70r" path="res://scenes/things/level_exit.tscn" id="7_bgyyk"]
 [ext_resource type="PackedScene" uid="uid://dgdcaq8j4mffq" path="res://scenes/levels/Outside_2.tscn" id="8_pgjgv"]
 [ext_resource type="PackedScene" uid="uid://dapbbrcphrkey" path="res://scenes/levels/lighting_test.tscn" id="9_h8bgh"]
-[ext_resource type="PackedScene" uid="uid://5nt51w7o6rtf" path="res://assets/TileMaps/forest_layer_2_tiles_2.tscn" id="10_u6l1v"]
+[ext_resource type="PackedScene" path="res://assets/TileMaps/forest_layer_2_tiles_2.tscn" id="10_u6l1v"]
 
 [node name="level1" type="Node2D"]
 
@@ -32,11 +32,43 @@ position = Vector2(182, 67)
 position = Vector2(978, 284)
 next_scene = ExtResource("8_pgjgv")
 
-[node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(-183, 315)
-scale = Vector2(11.1211, 10.75)
-color = Color(0.898039, 1, 1, 1)
+[node name="PointLight2D_GreenTree1" type="PointLight2D" parent="."]
+position = Vector2(410, 292)
+color = Color(0.858824, 0.976471, 0.745098, 1)
+energy = 0.4
 texture = ExtResource("6_ukf0c")
-height = 10.0
+texture_scale = 20.0
+height = 200.0
+
+[node name="PointLight2D_GreenTree2" type="PointLight2D" parent="."]
+position = Vector2(90, 226)
+color = Color(0.858824, 0.976471, 0.745098, 1)
+energy = 0.4
+texture = ExtResource("6_ukf0c")
+texture_scale = 20.0
+height = 200.0
+
+[node name="PointLight2D_BlueTree1" type="PointLight2D" parent="."]
+position = Vector2(733, 37)
+color = Color(0, 0.533333, 0.541176, 1)
+energy = 0.4
+texture = ExtResource("6_ukf0c")
+texture_scale = 20.0
+height = 200.0
+
+[node name="PointLight2D_BlueTree2" type="PointLight2D" parent="."]
+position = Vector2(925, 549)
+color = Color(0, 0.533333, 0.541176, 1)
+energy = 0.4
+texture = ExtResource("6_ukf0c")
+texture_scale = 20.0
+height = 200.0
+
+[node name="PointLight2D_BlueMushroom" type="PointLight2D" parent="."]
+position = Vector2(926, 289)
+color = Color(0, 0.533333, 0.541176, 1)
+texture = ExtResource("6_ukf0c")
+texture_scale = 2.0
+height = 200.0
 
 [node name="lighting" parent="." instance=ExtResource("9_h8bgh")]
