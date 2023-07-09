@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsri3pbifm4eq"
-path="res://.godot/imported/flatrat.png-249700b00f6e8d2038b3035b323812d1.ctex"
+uid="uid://bbb5iglus4x38"
+path="res://.godot/imported/elephantpankake.png-ec5cb48a3a45bd03bf70aab15dc8fc14.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/flatrat.png"
-dest_files=["res://.godot/imported/flatrat.png-249700b00f6e8d2038b3035b323812d1.ctex"]
+source_file="res://assets/Misc_character_other/elephantpankake.png"
+dest_files=["res://.godot/imported/elephantpankake.png-ec5cb48a3a45bd03bf70aab15dc8fc14.ctex"]
 
 [params]
 

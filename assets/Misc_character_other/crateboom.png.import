@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://td8t6s1ct7xh"
-path="res://.godot/imported/Mouse game jam sprite sheet.png-d709a7b3d0c5b5ac5dd59f33aea5084a.ctex"
+uid="uid://bp5w1gymnh2nj"
+path="res://.godot/imported/crateboom.png-7f7d099c3dd9b4320b73e206f4a286d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mouse game jam sprite sheet.png"
-dest_files=["res://.godot/imported/Mouse game jam sprite sheet.png-d709a7b3d0c5b5ac5dd59f33aea5084a.ctex"]
+source_file="res://assets/Misc_character_other/crateboom.png"
+dest_files=["res://.godot/imported/crateboom.png-7f7d099c3dd9b4320b73e206f4a286d9.ctex"]
 
 [params]
 

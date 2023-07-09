@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpgtephvqr7tk"
-path="res://.godot/imported/NewTileMap.png-d0058ef0d3b5807152cb03b0871fde89.ctex"
+uid="uid://fk0vaie5ydyc"
+path="res://.godot/imported/elephant-top-view.svg.hi.png-ea39879835b8329413e74ff0380ebb0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NewTileMap.png"
-dest_files=["res://.godot/imported/NewTileMap.png-d0058ef0d3b5807152cb03b0871fde89.ctex"]
+source_file="res://assets/Misc_character_other/elephant-top-view.svg.hi.png"
+dest_files=["res://.godot/imported/elephant-top-view.svg.hi.png-ea39879835b8329413e74ff0380ebb0f.ctex"]
 
 [params]
 

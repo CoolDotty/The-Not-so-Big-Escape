@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbnqsihlpilyp"
-path="res://.godot/imported/Valves.png-b7ce9069eb236307a12c30090ae90f8d.ctex"
+uid="uid://30nj1afwwnel"
+path="res://.godot/imported/SmallDoor.png-e2b35e74c062860d7571b2de431457e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Valves.png"
-dest_files=["res://.godot/imported/Valves.png-b7ce9069eb236307a12c30090ae90f8d.ctex"]
+source_file="res://assets/Misc_character_other/SmallDoor.png"
+dest_files=["res://.godot/imported/SmallDoor.png-e2b35e74c062860d7571b2de431457e9.ctex"]
 
 [params]
 

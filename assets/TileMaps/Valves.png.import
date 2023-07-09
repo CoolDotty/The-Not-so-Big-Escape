@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc0hdxfiuunid"
-path="res://.godot/imported/Mouse_game_jam_sprite_sheet.png-05baa1122c2911362cada9e85fe0ae50.ctex"
+uid="uid://bbnqsihlpilyp"
+path="res://.godot/imported/Valves.png-459ff565305c6e6b6459bc62f7cfbfe2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mouse_game_jam_sprite_sheet.png"
-dest_files=["res://.godot/imported/Mouse_game_jam_sprite_sheet.png-05baa1122c2911362cada9e85fe0ae50.ctex"]
+source_file="res://assets/TileMaps/Valves.png"
+dest_files=["res://.godot/imported/Valves.png-459ff565305c6e6b6459bc62f7cfbfe2.ctex"]
 
 [params]
 
