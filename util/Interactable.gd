@@ -5,7 +5,10 @@ class_name Interactable
 func _ready():
 	pass # Replace with function body.
 
+signal on_interact(Instigator)
 
-func _on_interact() -> void:
+func _on_interact(Instigator) -> void:
+	on_interact.emit(Instigator)
+	print("parent")
 	pass
 
