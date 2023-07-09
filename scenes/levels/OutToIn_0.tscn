@@ -1,19 +1,25 @@
-[gd_scene load_steps=15 format=3 uid="uid://nloq0ytddcj"]
+[gd_scene load_steps=21 format=3 uid="uid://nloq0ytddcj"]
 
 [ext_resource type="PackedScene" uid="uid://dapbbrcphrkey" path="res://scenes/levels/lighting_test.tscn" id="1_mpkfx"]
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="2_lo7j4"]
-[ext_resource type="PackedScene" uid="uid://5nt51w7o6rtf" path="res://assets/TileMaps/forest_layer_2_tiles_2.tscn" id="3_x0xo6"]
+[ext_resource type="PackedScene" uid="uid://bjlip7kbrmme4" path="res://assets/TileMaps/forest_layer_2_tiles_2.tscn" id="3_x0xo6"]
 [ext_resource type="PackedScene" uid="uid://bj70cqbd3i2vw" path="res://scenes/things/giant.tscn" id="4_0l8t5"]
 [ext_resource type="PackedScene" uid="uid://bday1l4lbsckq" path="res://assets/TileMaps/tile_map_lab_tiles.tscn" id="4_2hmt3"]
-[ext_resource type="PackedScene" uid="uid://crv1a65lmbey3" path="res://assets/TileMaps/valves_tiles.tscn" id="5_6nxwx"]
+[ext_resource type="PackedScene" uid="uid://c74yswrtojvlj" path="res://assets/TileMaps/valves_tiles.tscn" id="5_6nxwx"]
 [ext_resource type="PackedScene" uid="uid://b36kwhhp5uto0" path="res://scenes/things/player.tscn" id="6_vsteu"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="7_wlsns"]
 [ext_resource type="PackedScene" uid="uid://csh0es2febnbu" path="res://scenes/things/crate.tscn" id="9_774xl"]
 [ext_resource type="PackedScene" uid="uid://dwciwy7unj70r" path="res://scenes/things/level_exit.tscn" id="10_sif4s"]
+[ext_resource type="PackedScene" uid="uid://tvuvhrdbxn7b" path="res://scenes/levels/Greybox.tscn" id="11_0br1a"]
 [ext_resource type="PackedScene" uid="uid://bo1ekafakt4as" path="res://scenes/things/Door_open.tscn" id="11_s2lqn"]
 [ext_resource type="PackedScene" uid="uid://cr84yd28blu11" path="res://scenes/things/pressurePlate.tscn" id="12_tj7m6"]
 [ext_resource type="Texture2D" uid="uid://u2e5h6vhckqh" path="res://scenes/things/PurpleShroom.png" id="13_n0p7i"]
 [ext_resource type="Texture2D" uid="uid://4iuleixn8aoo" path="res://scenes/things/RedPlate.png" id="14_c2am7"]
+[ext_resource type="PackedScene" uid="uid://c0b5joknarjl3" path="res://scenes/things/Valve.tscn" id="16_ak1ld"]
+[ext_resource type="PackedScene" uid="uid://df0vrto2ywn2h" path="res://scenes/things/cheatyfaucet.tscn" id="17_htcrf"]
+[ext_resource type="AudioStream" uid="uid://bhppnq12hq45i" path="res://assets/sounds/Christian_Hayward_-_ID_v3 EDIT.mp3" id="18_jafy6"]
+[ext_resource type="PackedScene" uid="uid://p2r2cnmc7hwn" path="res://scenes/storymode/instastories/instastory.tscn" id="19_1cwkb"]
+[ext_resource type="Resource" uid="uid://xgjt0lpqyecp" path="res://outside_4_story.dialogue" id="20_5e8nd"]
 
 [node name="level0" type="Node2D"]
 
@@ -34,6 +40,7 @@ layer_0/z_index = -1
 layer_0/tile_data = PackedInt32Array(393228, 0, 1, 65548, 0, 1, 131084, 0, 1, 131085, 0, 1, 131087, 0, 1, 131088, 0, 1, 65551, 0, 1, 327693, 0, 1, 327692, 0, 1, 262157, 0, 1, 327689, 0, 1)
 
 [node name="Valves_tiles2" parent="." instance=ExtResource("5_6nxwx")]
+visible = false
 layer_0/tile_data = PackedInt32Array(65548, 65537, 0, 589839, 1, 1)
 
 [node name="giant" parent="." instance=ExtResource("4_0l8t5")]
@@ -110,8 +117,9 @@ position = Vector2(994, 100)
 
 [node name="level_exit" parent="." node_paths=PackedStringArray("Triggers", "Target_Instagators") instance=ExtResource("10_sif4s")]
 position = Vector2(1059, 160)
+next_scene = ExtResource("11_0br1a")
 Triggers = [NodePath("../pressurePlate2")]
-Target_Instagators = [NodePath("../giant")]
+Target_Instagators = [NodePath("../player")]
 require_triggers_to_open = 1
 
 [node name="Door_open" parent="." node_paths=PackedStringArray("Triggers", "Target_Instagators") instance=ExtResource("11_s2lqn")]
@@ -133,3 +141,18 @@ position = Vector2(993, 159)
 
 [node name="Sprite2D" type="Sprite2D" parent="pressurePlate2"]
 texture = ExtResource("14_c2am7")
+
+[node name="Valve" parent="." instance=ExtResource("16_ak1ld")]
+position = Vector2(798, 97)
+
+[node name="cheatyfaucet" parent="." instance=ExtResource("17_htcrf")]
+position = Vector2(992, 609)
+
+[node name="LabSong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_jafy6")
+autoplay = true
+
+[node name="instastory" parent="." instance=ExtResource("19_1cwkb")]
+story = ExtResource("20_5e8nd")
+
+[connection signal="interacted" from="Valve" to="cheatyfaucet" method="_on_interacted"]

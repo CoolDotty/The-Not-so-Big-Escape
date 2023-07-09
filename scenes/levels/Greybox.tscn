@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://tvuvhrdbxn7b"]
+[gd_scene load_steps=16 format=3 uid="uid://tvuvhrdbxn7b"]
 
 [ext_resource type="PackedScene" uid="uid://dapbbrcphrkey" path="res://scenes/levels/lighting_test.tscn" id="1_f516t"]
 [ext_resource type="PackedScene" uid="uid://bj70cqbd3i2vw" path="res://scenes/things/giant.tscn" id="2_o30yc"]
@@ -8,9 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://bday1l4lbsckq" path="res://assets/TileMaps/tile_map_lab_tiles.tscn" id="6_all08"]
 [ext_resource type="PackedScene" uid="uid://dwciwy7unj70r" path="res://scenes/things/level_exit.tscn" id="7_62c6n"]
 [ext_resource type="PackedScene" uid="uid://cr84yd28blu11" path="res://scenes/things/pressurePlate.tscn" id="8_r21j1"]
+[ext_resource type="PackedScene" uid="uid://bm1sdun881g4m" path="res://scenes/levels/epic_escape.tscn" id="8_ud276"]
 [ext_resource type="Texture2D" uid="uid://4iuleixn8aoo" path="res://scenes/things/RedPlate.png" id="9_ck5fn"]
 [ext_resource type="PackedScene" uid="uid://csh0es2febnbu" path="res://scenes/things/crate.tscn" id="10_7dbvm"]
 [ext_resource type="PackedScene" uid="uid://bo1ekafakt4as" path="res://scenes/things/Door_open.tscn" id="12_4rrqg"]
+[ext_resource type="AudioStream" uid="uid://bhppnq12hq45i" path="res://assets/sounds/Christian_Hayward_-_ID_v3 EDIT.mp3" id="12_eusyt"]
+[ext_resource type="PackedScene" uid="uid://p2r2cnmc7hwn" path="res://scenes/storymode/instastories/instastory.tscn" id="14_dcs7g"]
+[ext_resource type="Resource" uid="uid://dqx63cm3f3gfv" path="res://lab_story.dialogue" id="15_2etl1"]
 
 [node name="level0" type="Node2D"]
 
@@ -119,8 +123,9 @@ layer_0/tile_data = PackedInt32Array(393221, 196608, 1, 786449, 196608, 1, 39324
 
 [node name="level_exit" parent="." node_paths=PackedStringArray("Triggers", "Target_Instagators") instance=ExtResource("7_62c6n")]
 position = Vector2(1761, 1311)
+next_scene = ExtResource("8_ud276")
 Triggers = [NodePath("../pressurePlate")]
-Target_Instagators = [NodePath("../giant")]
+Target_Instagators = [NodePath("../player")]
 
 [node name="pressurePlate" parent="." instance=ExtResource("8_r21j1")]
 z_index = -1
@@ -143,6 +148,10 @@ position = Vector2(416, 544)
 
 [node name="crate9" parent="." instance=ExtResource("10_7dbvm")]
 position = Vector2(1569, 800)
+
+[node name="LabSong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_eusyt")
+autoplay = true
 
 [node name="crate10" parent="." instance=ExtResource("10_7dbvm")]
 position = Vector2(1569, 863)
@@ -212,3 +221,6 @@ position = Vector2(736, 799)
 Triggers = [NodePath("../pressurePlate4")]
 Target_Instagators = [NodePath("../giant")]
 require_triggers_to_open = 1
+
+[node name="instastory" parent="." instance=ExtResource("14_dcs7g")]
+story = ExtResource("15_2etl1")

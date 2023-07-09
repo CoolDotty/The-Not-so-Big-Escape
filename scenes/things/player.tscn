@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b36kwhhp5uto0"]
+[gd_scene load_steps=16 format=3 uid="uid://b36kwhhp5uto0"]
 
 [ext_resource type="Script" path="res://scenes/things/player_controller.gd" id="1_y7elc"]
 [ext_resource type="Texture2D" uid="uid://n0r0dhvnwf4b" path="res://assets/SpriteSheets/elephant_sprite_sheet_normalmap.png" id="2_jeatc"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bclixkfrqdby1" path="res://assets/SpriteSheets/toots2.png" id="6_s7k6v"]
 [ext_resource type="Texture2D" uid="uid://bjahuho4swe7e" path="res://assets/Misc_character_other/elephantpankake_normalmap.png" id="6_ywidp"]
 [ext_resource type="Texture2D" uid="uid://bav4dhr662ofp" path="res://assets/SpriteSheets/toots.png" id="7_3qh60"]
+[ext_resource type="AudioStream" uid="uid://dkpepxxqggb14" path="res://assets/sounds/toot1.ogg" id="10_s5vxt"]
 
 [sub_resource type="Shader" id="Shader_omgl8"]
 code = "// Mandatory line to define 2D shaders
@@ -89,3 +90,7 @@ position = Vector2(20, -16)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_3qh60")
 hframes = 4
+
+[node name="Toot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_s5vxt")
+pitch_scale = 0.89

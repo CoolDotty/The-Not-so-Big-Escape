@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0b5joknarjl3"]
+
+[ext_resource type="Script" path="res://scenes/things/cheatyinteract.gd" id="1_ql4s2"]
+[ext_resource type="Texture2D" uid="uid://bbnqsihlpilyp" path="res://assets/TileMaps/Valves.png" id="2_03on0"]
+
+[node name="Valve" type="Node2D"]
+script = ExtResource("1_ql4s2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_03on0")
+hframes = 5
+vframes = 5
+frame = 1

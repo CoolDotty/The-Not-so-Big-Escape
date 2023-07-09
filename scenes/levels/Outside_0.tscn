@@ -1,13 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://bg2qbdffcvl47"]
+[gd_scene load_steps=14 format=3 uid="uid://bg2qbdffcvl47"]
 
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="1_567c3"]
 [ext_resource type="Texture2D" uid="uid://ve5v545ihy8m" path="res://assets/TileMaps/Tile Map Forest Layer 2.png" id="2_8tafj"]
 [ext_resource type="PackedScene" uid="uid://bj70cqbd3i2vw" path="res://scenes/things/giant.tscn" id="3_13hdh"]
-[ext_resource type="PackedScene" uid="uid://crv1a65lmbey3" path="res://assets/TileMaps/valves_tiles.tscn" id="3_kdfjj"]
+[ext_resource type="PackedScene" uid="uid://c74yswrtojvlj" path="res://assets/TileMaps/valves_tiles.tscn" id="3_kdfjj"]
 [ext_resource type="PackedScene" uid="uid://b36kwhhp5uto0" path="res://scenes/things/player.tscn" id="5_xda1w"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="6_dyth6"]
 [ext_resource type="PackedScene" uid="uid://dwciwy7unj70r" path="res://scenes/things/level_exit.tscn" id="7_grpmv"]
 [ext_resource type="PackedScene" uid="uid://d0ma114qhbsb1" path="res://scenes/levels/Outside_1.tscn" id="8_rhi7x"]
+[ext_resource type="PackedScene" uid="uid://df0vrto2ywn2h" path="res://scenes/things/cheatyfaucet.tscn" id="9_npi6r"]
+[ext_resource type="PackedScene" uid="uid://c0b5joknarjl3" path="res://scenes/things/Valve.tscn" id="10_tj1ew"]
+[ext_resource type="AudioStream" uid="uid://dwplycluq2xwo" path="res://assets/sounds/Forest-theme-V2.mp3" id="11_u4ch7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ytiik"]
 texture = ExtResource("2_8tafj")
@@ -71,6 +74,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(262150, 0, 0, 655365, 0, 0, 393229, 0, 0, 655383, 0, 0, 655366, 0, 1, 458763, 0, 1, 196627, 0, 1, 851991, 0, 1, 786435, 65536, 1, 393238, 65536, 1, 458764, 196608, 0, 458762, 196608, 0, 655367, 196608, 0, 655382, 196608, 0, 720903, 131072, 0, 786447, 131072, 0, 851983, 131072, 0, 524313, 131072, 2)
 
 [node name="Valves_tiles2" parent="." instance=ExtResource("3_kdfjj")]
+visible = false
 layer_0/tile_data = PackedInt32Array(65560, 65537, 0, 196629, 1, 1)
 
 [node name="giant" parent="." instance=ExtResource("3_13hdh")]
@@ -87,6 +91,19 @@ shadow_enabled = true
 texture = ExtResource("6_dyth6")
 height = 10.0
 
-[node name="level_exit" parent="." instance=ExtResource("7_grpmv")]
+[node name="level_exit" parent="." node_paths=PackedStringArray("Target_Instagators") instance=ExtResource("7_grpmv")]
 position = Vector2(1698, 543)
 next_scene = ExtResource("8_rhi7x")
+Target_Instagators = [NodePath("../player")]
+
+[node name="cheatyfaucet" parent="." instance=ExtResource("9_npi6r")]
+position = Vector2(1377, 224)
+
+[node name="Valve" parent="." instance=ExtResource("10_tj1ew")]
+position = Vector2(1568, 96)
+
+[node name="ForestSong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_u4ch7")
+autoplay = true
+
+[connection signal="interacted" from="Valve" to="cheatyfaucet" method="_on_interacted"]

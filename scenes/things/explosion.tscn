@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://xjvaikua2vue"]
+
+[ext_resource type="Script" path="res://scenes/things/explosion.gd" id="1_cfd00"]
+[ext_resource type="Texture2D" uid="uid://bp5w1gymnh2nj" path="res://assets/Misc_character_other/crateboom.png" id="2_i15jk"]
+
+[node name="explosion" type="Node2D"]
+script = ExtResource("1_cfd00")
+
+[node name="Crateboom" type="Sprite2D" parent="."]
+texture = ExtResource("2_i15jk")

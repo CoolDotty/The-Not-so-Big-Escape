@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://d0ss8ypym84mn"
+path="res://.godot/imported/outside_1_story.dialogue-4bf83cb36d2f054fc70b4d972269abc6.tres"
+
+[deps]
+
+source_file="res://outside_1_story.dialogue"
+dest_files=["res://.godot/imported/outside_1_story.dialogue-4bf83cb36d2f054fc70b4d972269abc6.tres"]
+
+[params]
+
+defaults=true

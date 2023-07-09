@@ -233,6 +233,7 @@ func _agro_windup(delta):
 	$AnimatedSprite2D.offset = Vector2(randf_range(-shake, shake), randf_range(-shake, shake))
 	if is_instance_valid(_agro_timer):
 		return
+	$Angry.play()
 	_agro_timer = Timer.new()
 	add_child(_agro_timer)
 	_agro_timer.wait_time = 1.0

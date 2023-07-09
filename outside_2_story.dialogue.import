@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dohutmukplx2a"
+path="res://.godot/imported/outside_2_story.dialogue-e758b6a7e7d46c35dec534999252cd9b.tres"
+
+[deps]
+
+source_file="res://outside_2_story.dialogue"
+dest_files=["res://.godot/imported/outside_2_story.dialogue-e758b6a7e7d46c35dec534999252cd9b.tres"]
+
+[params]
+
+defaults=true

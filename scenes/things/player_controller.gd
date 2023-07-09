@@ -56,6 +56,7 @@ func _no_collide():
 
 
 func squeak():
+	$Toot.play()
 	$TrumpetSpriteSqueak.visible = true
 	$TrumpetSpriteNotes.visible = true
 	for i in range(0, $TrumpetSpriteSqueak.hframes*4):

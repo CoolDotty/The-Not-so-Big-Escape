@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bctkgwmdbh354"]
+[gd_scene load_steps=8 format=3 uid="uid://bctkgwmdbh354"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_ekuea"]
 [ext_resource type="PackedScene" uid="uid://5ly1ys5qnvpl" path="res://scenes/storymode/stories/Prologue.tscn" id="2_wmv87"]
 [ext_resource type="Material" uid="uid://kyd2se2nc8qq" path="res://scenes/Sawtooth.tres" id="3_ymj2n"]
 [ext_resource type="Texture2D" uid="uid://c5vjf128a4ikw" path="res://assets/Slides/Mouse death screen.png" id="4_8jgbl"]
+[ext_resource type="AudioStream" uid="uid://dwplycluq2xwo" path="res://assets/sounds/Forest-theme-V2.mp3" id="5_vdxa8"]
+[ext_resource type="AudioStream" uid="uid://bhppnq12hq45i" path="res://assets/sounds/Christian_Hayward_-_ID_v3 EDIT.mp3" id="6_rnbgn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vmxvr"]
 outline_size = 10
@@ -55,3 +57,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="ForestSong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_vdxa8")
+
+[node name="LabSong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_rnbgn")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhppnq12hq45i"
+path="res://.godot/imported/Christian_Hayward_-_ID_v3 EDIT.mp3-1aa4c235e71a5b28476ac53924ce4312.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Christian_Hayward_-_ID_v3 EDIT.mp3"
+dest_files=["res://.godot/imported/Christian_Hayward_-_ID_v3 EDIT.mp3-1aa4c235e71a5b28476ac53924ce4312.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

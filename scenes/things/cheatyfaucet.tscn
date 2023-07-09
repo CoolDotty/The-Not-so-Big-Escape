@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://df0vrto2ywn2h"]
+
+[ext_resource type="Texture2D" uid="uid://bbnqsihlpilyp" path="res://assets/TileMaps/Valves.png" id="1_8r6gu"]
+[ext_resource type="Script" path="res://scenes/things/cheatyfaucet.gd" id="1_o4y1f"]
+
+[node name="cheatyfaucet" type="Node2D"]
+script = ExtResource("1_o4y1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8r6gu")
+hframes = 5
+vframes = 5
+frame = 5
