@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/things/player_controller.gd" id="1_y7elc"]
 [ext_resource type="Texture2D" uid="uid://cencfxxabr5ed" path="res://assets/Elephant Sprite Sheet.png" id="2_r556u"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="4_gfdkj"]
-[ext_resource type="Texture2D" uid="uid://bsri3pbifm4eq" path="res://assets/flatrat.png" id="5_etf2t"]
+[ext_resource type="Texture2D" uid="uid://bbb5iglus4x38" path="res://assets/elephantpankake.png" id="4_kmn8f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f7jqg"]
 radius = 15.0
@@ -34,8 +34,10 @@ height = 10.0
 
 [node name="DeathSprite" type="Sprite2D" parent="."]
 visible = false
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_etf2t")
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_kmn8f")
+hframes = 3
+frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
