@@ -2,15 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://dapbbrcphrkey" path="res://scenes/levels/lighting_test.tscn" id="1_f516t"]
 [ext_resource type="PackedScene" uid="uid://bj70cqbd3i2vw" path="res://scenes/things/giant.tscn" id="2_o30yc"]
-[ext_resource type="PackedScene" uid="uid://crv1a65lmbey3" path="res://assets/TileMaps/valves_tiles.tscn" id="2_q6wcy"]
+[ext_resource type="PackedScene" uid="uid://c74yswrtojvlj" path="res://assets/TileMaps/valves_tiles.tscn" id="2_q6wcy"]
 [ext_resource type="PackedScene" uid="uid://b36kwhhp5uto0" path="res://scenes/things/player.tscn" id="4_qkvyc"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="5_0n01h"]
-[ext_resource type="PackedScene" uid="uid://dsowd4elw4les" path="res://assets/TileMaps/tile_map_lab_tiles.tscn" id="6_all08"]
+[ext_resource type="PackedScene" path="res://assets/TileMaps/tile_map_lab_tiles.tscn" id="6_all08"]
 [ext_resource type="PackedScene" uid="uid://dwciwy7unj70r" path="res://scenes/things/level_exit.tscn" id="7_62c6n"]
 [ext_resource type="PackedScene" uid="uid://cr84yd28blu11" path="res://scenes/things/pressurePlate.tscn" id="8_r21j1"]
 [ext_resource type="Texture2D" uid="uid://4iuleixn8aoo" path="res://scenes/things/RedPlate.png" id="9_ck5fn"]
 [ext_resource type="PackedScene" uid="uid://csh0es2febnbu" path="res://scenes/things/crate.tscn" id="10_7dbvm"]
-[ext_resource type="PackedScene" uid="uid://ckru5f2h05tp3" path="res://scenes/things/Door_open.tscn" id="12_4rrqg"]
+[ext_resource type="PackedScene" path="res://scenes/things/Door_open.tscn" id="12_4rrqg"]
 
 [node name="level0" type="Node2D"]
 
@@ -53,7 +53,7 @@ position = Vector2(1761, 1311)
 [node name="pressurePlate" parent="." instance=ExtResource("8_r21j1")]
 position = Vector2(1632, 1247)
 
-[node name="Sprite2D" type="Sprite2D" parent="pressurePlate"]
+[node name="Sprite2D2" type="Sprite2D" parent="pressurePlate"]
 texture = ExtResource("9_ck5fn")
 
 [node name="crate" parent="." instance=ExtResource("10_7dbvm")]
@@ -104,37 +104,37 @@ position = Vector2(543, 416)
 [node name="pressurePlate2" parent="." instance=ExtResource("8_r21j1")]
 position = Vector2(864, 737)
 
-[node name="Sprite2D" type="Sprite2D" parent="pressurePlate2"]
+[node name="Sprite2D2" type="Sprite2D" parent="pressurePlate2"]
 texture = ExtResource("9_ck5fn")
 
 [node name="pressurePlate3" parent="." instance=ExtResource("8_r21j1")]
 position = Vector2(929, 162)
 
-[node name="Sprite2D" type="Sprite2D" parent="pressurePlate3"]
+[node name="Sprite2D2" type="Sprite2D" parent="pressurePlate3"]
 texture = ExtResource("9_ck5fn")
 
 [node name="pressurePlate4" parent="." instance=ExtResource("8_r21j1")]
 position = Vector2(673, 738)
 
-[node name="Sprite2D" type="Sprite2D" parent="pressurePlate4"]
+[node name="Sprite2D2" type="Sprite2D" parent="pressurePlate4"]
 texture = ExtResource("9_ck5fn")
 
 [node name="Door_open" parent="." node_paths=PackedStringArray("Triggers") instance=ExtResource("12_4rrqg")]
 position = Vector2(992, 737)
-Triggers = [NodePath("../pressurePlate2")]
+Triggers = [null]
 require_triggers_to_open = 1
 
 [node name="Door_open2" parent="." node_paths=PackedStringArray("Triggers") instance=ExtResource("12_4rrqg")]
 position = Vector2(993, 158)
-Triggers = [NodePath("../pressurePlate3")]
+Triggers = [null]
 require_triggers_to_open = 1
 
 [node name="Door_open3" parent="." node_paths=PackedStringArray("Triggers") instance=ExtResource("12_4rrqg")]
 position = Vector2(736, 799)
-Triggers = [NodePath("../pressurePlate4")]
+Triggers = [null]
 require_triggers_to_open = 1
 
 [node name="Door_open4" parent="." node_paths=PackedStringArray("Triggers") instance=ExtResource("12_4rrqg")]
 position = Vector2(32, 159)
-Triggers = [NodePath("../pressurePlate2")]
+Triggers = [null]
 require_triggers_to_open = 1
