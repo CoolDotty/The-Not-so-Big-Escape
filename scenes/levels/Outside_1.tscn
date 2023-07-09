@@ -33,10 +33,11 @@ safe_margin = 5.0
 [node name="player" parent="." instance=ExtResource("5_0fhlb")]
 position = Vector2(182, 67)
 
-[node name="level_exit" parent="." node_paths=PackedStringArray("Triggers") instance=ExtResource("7_bgyyk")]
+[node name="level_exit" parent="." node_paths=PackedStringArray("Triggers", "Target_Instagators") instance=ExtResource("7_bgyyk")]
 position = Vector2(992, 224)
 next_scene = ExtResource("8_pgjgv")
 Triggers = [NodePath("../pressurePlate")]
+Target_Instagators = [NodePath("../giant")]
 require_triggers_to_open = 1
 
 [node name="PointLight2D_GreenTree1" type="PointLight2D" parent="."]
