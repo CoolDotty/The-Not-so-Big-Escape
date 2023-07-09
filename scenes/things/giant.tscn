@@ -201,7 +201,13 @@ polygon = PackedVector2Array(0, 0, 100, -100, 180, -75, 200, 0, 180, 75, 100, 10
 [node name="StateTimer" type="Timer" parent="vision"]
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 64.0
+target_desired_distance = 100.0
+path_max_distance = 200.0
 path_postprocessing = 1
+radius = 50.0
+time_horizon_obstacles = 1.0
+debug_enabled = true
 
 [node name="Nav_stuck_timer" type="Timer" parent="."]
 
