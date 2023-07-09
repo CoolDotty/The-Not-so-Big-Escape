@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://nloq0ytddcj"]
+[gd_scene load_steps=10 format=3 uid="uid://d3aqyn5sgvqql"]
 
 [ext_resource type="PackedScene" uid="uid://dapbbrcphrkey" path="res://scenes/levels/lighting_test.tscn" id="1_mpkfx"]
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="2_lo7j4"]
@@ -110,11 +110,9 @@ tile_set = SubResource("TileSet_i4mcy")
 format = 2
 layer_0/tile_data = PackedInt32Array(327688, 196608, 1, 262152, 65536, 0, 393224, 65536, 0, 131084, 65536, 1, 458767, 65536, 1, 589838, 196608, 1, 262159, 196608, 0)
 
-[node name="giant" parent="." node_paths=PackedStringArray("dangerLightLeft", "dangerLightRight") instance=ExtResource("4_0l8t5")]
+[node name="giant" parent="." instance=ExtResource("4_0l8t5")]
 position = Vector2(803, 361)
 rotation = 1.5708
-dangerLightLeft = NodePath("")
-dangerLightRight = NodePath("")
 
 [node name="crate" parent="." instance=ExtResource("5_sogo7")]
 visible = false
