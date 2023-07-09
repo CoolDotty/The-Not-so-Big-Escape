@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckru5f2h05tp3"]
+
+[ext_resource type="Script" path="res://assets/Interactable/Door_open.gd" id="1_miksy"]
+[ext_resource type="Texture2D" uid="uid://dfbvfw5u1u07d" path="res://assets/Interactable/forestdoor.png" id="2_d1fgn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvs7v"]
+size = Vector2(64, 64)
+
+[node name="Door_open" type="Area2D"]
+script = ExtResource("1_miksy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hvs7v")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_d1fgn")
+hframes = 5
+vframes = 5
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
