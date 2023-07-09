@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dgdcaq8j4mffq"]
 
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="1_6vofk"]
-[ext_resource type="Texture2D" uid="uid://dpgtephvqr7tk" path="res://assets/NewTileMap.png" id="2_flh0g"]
+[ext_resource type="Texture2D" uid="uid://dpgtephvqr7tk" path="res://assets/TileMaps/NewTileMap.png" id="2_eh4ja"]
 [ext_resource type="PackedScene" uid="uid://bj70cqbd3i2vw" path="res://scenes/things/giant.tscn" id="3_xk2ot"]
 [ext_resource type="PackedScene" uid="uid://csh0es2febnbu" path="res://scenes/things/crate.tscn" id="4_q02pl"]
 [ext_resource type="PackedScene" uid="uid://b36kwhhp5uto0" path="res://scenes/things/player.tscn" id="5_retkh"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cylqk18xbhke8" path="res://scenes/levels/level0.tscn" id="8_vsa2f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5cdio"]
-texture = ExtResource("2_flh0g")
+texture = ExtResource("2_eh4ja")
 texture_region_size = Vector2i(64, 64)
 4:3/0 = 0
 4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
