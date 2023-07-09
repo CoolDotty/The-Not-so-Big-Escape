@@ -11,8 +11,8 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_interact():
+func _on_interact(Instigator):
+	super._on_interact(Instigator)
 	print("interacting with lever")
 	#add lever function here
 	pass
-	
