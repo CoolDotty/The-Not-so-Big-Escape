@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c34tt84paekjm"]
+[gd_scene load_steps=4 format=3 uid="uid://dwciwy7unj70r"]
 
 [ext_resource type="Script" path="res://scenes/things/level_exit.gd" id="1_ctymp"]
-[ext_resource type="Texture2D" uid="uid://cie1ysgxan0ui" path="res://assets/icon.svg" id="1_kxjnl"]
+[ext_resource type="Texture2D" uid="uid://dfbvfw5u1u07d" path="res://assets/forestdoor.png" id="2_og3wr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hvs7v"]
 size = Vector2(64, 64)
@@ -13,7 +13,8 @@ script = ExtResource("1_ctymp")
 shape = SubResource("RectangleShape2D_hvs7v")
 
 [node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_kxjnl")
+texture = ExtResource("2_og3wr")
+hframes = 5
+vframes = 5
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

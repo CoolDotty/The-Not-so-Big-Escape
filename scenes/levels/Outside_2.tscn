@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c8sqi8lwc00xb"]
+[gd_scene load_steps=12 format=3 uid="uid://dgdcaq8j4mffq"]
 
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="1_6vofk"]
 [ext_resource type="Texture2D" uid="uid://dpgtephvqr7tk" path="res://assets/NewTileMap.png" id="2_flh0g"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://csh0es2febnbu" path="res://scenes/things/crate.tscn" id="4_q02pl"]
 [ext_resource type="PackedScene" uid="uid://b36kwhhp5uto0" path="res://scenes/things/player.tscn" id="5_retkh"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="6_4nmn6"]
-[ext_resource type="PackedScene" uid="uid://c34tt84paekjm" path="res://scenes/things/level_exit.tscn" id="7_561ld"]
+[ext_resource type="PackedScene" uid="uid://dwciwy7unj70r" path="res://scenes/things/level_exit.tscn" id="7_561ld"]
 [ext_resource type="PackedScene" uid="uid://dapbbrcphrkey" path="res://scenes/levels/lighting_test.tscn" id="8_dt4tq"]
 [ext_resource type="PackedScene" uid="uid://cylqk18xbhke8" path="res://scenes/levels/level0.tscn" id="8_vsa2f"]
 
