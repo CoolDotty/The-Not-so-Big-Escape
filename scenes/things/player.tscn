@@ -21,15 +21,14 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_jx6iy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_f7jqg")
 
 [node name="PlayerLight2D" type="PointLight2D" parent="."]
-energy = 0.3
+energy = 0.5
 shadow_enabled = true
 texture = ExtResource("4_gfdkj")
-texture_scale = 0.2
+texture_scale = 0.3
 height = 10.0
 
 [node name="DeathSprite" type="Sprite2D" parent="."]
@@ -43,3 +42,4 @@ texture = ExtResource("5_etf2t")
 position = Vector2(20.155, 0)
 shape = SubResource("RectangleShape2D_d2sjw")
 target_position = Vector2(0, 0)
+collide_with_areas = true

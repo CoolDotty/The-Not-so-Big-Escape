@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 const lore_name = "Trunks"
 
 const is_destroyable = true
@@ -56,16 +57,33 @@ func _restart():
 var _interact_Comp : ShapeCast2D
 func _init_interact():
 	_interact_Comp = $ShapeCast2D
-	#_interact_Comp.add_exception($CollisionShape2D)
+	_interact_Comp.add_exception(self)
 	
-signal Player_interacting()
+signal Player_interacting_notify()
 func _interact():
+	if(not _interact_Comp.is_colliding()): return
 	#add sound effect here
 	#add effect here
-	Player_interacting.emit()
+	
+	#init nesseries
+	var hitActor : Node2D
+	
+	#start
+	for i in _interact_Comp.get_collision_count():
+		hitActor = _interact_Comp.get_collider(i).get_owner()
+		if(hitActor == null): continue
+		if(hitActor is Interactable):
+			hitActor._on_interact()
+			Player_interacting_notify.emit()
 	
 func _check_interactable_inRange():
-	if(not _interact_Comp.is_colliding()): return
-	#print(_interact_Comp.get_collision_count())
-	var hitActor = _interact_Comp.get_collider(0)
+	#init nesseries
+	var hitActor : Node2D
+	#start
 	
+	for i in _interact_Comp.get_collision_count():
+		hitActor = _interact_Comp.get_collider(i).get_owner()
+		if(hitActor == null): continue
+		if(hitActor is Interactable):
+			#add show UI interacting here
+			pass
