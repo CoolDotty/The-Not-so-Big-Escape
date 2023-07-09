@@ -80,6 +80,7 @@ height = 200.0
 [node name="lighting" parent="." instance=ExtResource("9_h8bgh")]
 
 [node name="pressurePlate" parent="." instance=ExtResource("10_4uxnt")]
+z_index = -1
 position = Vector2(860, 253)
 
 [node name="Sprite2D" type="Sprite2D" parent="pressurePlate"]
