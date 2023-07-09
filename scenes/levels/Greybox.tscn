@@ -10,7 +10,6 @@
 [node name="level0" type="Node2D"]
 
 [node name="lighting" parent="." instance=ExtResource("1_f516t")]
-visible = false
 
 [node name="Valves_tiles2" parent="." instance=ExtResource("2_q6wcy")]
 layer_0/tile_data = PackedInt32Array(65562, 65537, 0, 262158, 1, 1)
