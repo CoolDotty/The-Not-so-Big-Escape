@@ -5,8 +5,8 @@ class_name Interactable
 func _ready():
 	pass # Replace with function body.
 
-signal on_interact(Instigator)
+signal on_interact(Instigator, trigger)
 
 func _on_interact(Instigator) -> void:
-	on_interact.emit(Instigator)
+	on_interact.emit(Instigator, self)
 	pass
