@@ -1,7 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://csh0es2febnbu"]
+[gd_scene load_steps=8 format=3 uid="uid://csh0es2febnbu"]
 
 [ext_resource type="Script" path="res://scenes/things/crate.gd" id="1_5xuhr"]
+[ext_resource type="Shader" path="res://scenes/things/normal_map_shader.gdshader" id="2_c1ay1"]
 [ext_resource type="Texture2D" uid="uid://cjowrg3jwf04y" path="res://assets/SpriteSheets/crate_sheet.png" id="2_l7568"]
+[ext_resource type="Texture2D" uid="uid://d04bfbhwysxaj" path="res://assets/SpriteSheets/crate_sheet_normalmap.png" id="3_02k2x"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i2po1"]
+shader = ExtResource("2_c1ay1")
+shader_parameter/normal_map = ExtResource("3_02k2x")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o4xyy"]
 size = Vector2(60, 60)
@@ -13,6 +19,7 @@ polygon = PackedVector2Array(107, -106.1, 107, 106, 106.1, 107, -106, 107, -107,
 script = ExtResource("1_5xuhr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_i2po1")
 texture = ExtResource("2_l7568")
 hframes = 5
 

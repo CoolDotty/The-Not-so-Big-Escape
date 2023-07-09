@@ -1,7 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bo1ekafakt4as"]
+[gd_scene load_steps=7 format=3 uid="uid://bo1ekafakt4as"]
 
 [ext_resource type="Script" path="res://assets/Interactable/Door_open.gd" id="1_miksy"]
+[ext_resource type="Shader" path="res://scenes/things/normal_map_shader.gdshader" id="2_5y42l"]
 [ext_resource type="Texture2D" uid="uid://dfbvfw5u1u07d" path="res://assets/Interactable/forestdoor.png" id="2_d1fgn"]
+[ext_resource type="Texture2D" uid="uid://bxmac7chgeh2j" path="res://assets/Interactable/forestdoor_normalmap.png" id="3_p7bir"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5s4pu"]
+shader = ExtResource("2_5y42l")
+shader_parameter/normal_map = ExtResource("3_p7bir")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hvs7v"]
 size = Vector2(64, 64)
@@ -10,6 +16,7 @@ size = Vector2(64, 64)
 script = ExtResource("1_miksy")
 
 [node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_5s4pu")
 texture = ExtResource("2_d1fgn")
 hframes = 5
 vframes = 5
