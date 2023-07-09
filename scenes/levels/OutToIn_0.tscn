@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://nloq0ytddcj"]
+[gd_scene load_steps=15 format=3 uid="uid://nloq0ytddcj"]
 
 [ext_resource type="PackedScene" uid="uid://dapbbrcphrkey" path="res://scenes/levels/lighting_test.tscn" id="1_mpkfx"]
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="2_lo7j4"]
@@ -230,45 +230,36 @@ texture_region_size = Vector2i(64, 64)
 3:3/0/physics_layer_1/linear_velocity = Vector2(0, 0)
 3:3/0/physics_layer_1/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sw6f2"]
-texture = ExtResource("5_66kto")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -0.75, -32, 32, 30, 32, 32, 1.25)
-0:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_1/angular_velocity = 0.0
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 0.5, -32, 32, 32, 32, 32, 1.5)
-1:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_1/angular_velocity = 0.0
-2:0/0 = 0
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 1.25, -32, 32, 32, 32, 32, -0.75)
-2:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_1/angular_velocity = 0.0
-3:0/0 = 0
-3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:0/0/physics_layer_0/angular_velocity = 0.0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 1.25, -32, 32, 32, 32, 32, 1.5)
-3:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
-3:0/0/physics_layer_1/angular_velocity = 0.0
-
 [sub_resource type="TileSet" id="TileSet_5bh66"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 physics_layer_1/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_mah3j")
-sources/1 = SubResource("TileSetAtlasSource_sw6f2")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvqlv"]
+texture = ExtResource("5_66kto")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_poidm"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_kvqlv")
 
 [node name="level0" type="Node2D"]
 
 [node name="lighting" parent="." instance=ExtResource("1_mpkfx")]
-visible = false
 
 [node name="puzzle_tiles" parent="." instance=ExtResource("2_lo7j4")]
 z_index = -1
@@ -286,6 +277,10 @@ layer_0/tile_data = PackedInt32Array(327688, 196608, 1, 262152, 65536, 0, 393224
 tile_set = SubResource("TileSet_5bh66")
 format = 2
 layer_0/tile_data = PackedInt32Array(262152, 65536, 1, 393224, 131072, 2, 327688, 0, 2, 327687, 131072, 0, 65551, 0, 3, 589837, 131072, 1, 131087, 131072, 0, 131088, 65536, 4, 327689, 65536, 4, 327692, 0, 3, 262157, 0, 3, 327693, 0, 3, 327695, 65536, 1, 589839, 1, 0, 589836, 0, 1, 524300, 0, 1, 458764, 0, 1, 458765, 0, 1, 524301, 0, 1, 524302, 0, 1, 589838, 0, 1, 393229, 0, 1, 393228, 0, 1, 393227, 0, 1, 393226, 0, 1, 327690, 0, 1, 262154, 0, 1, 262155, 0, 1, 262156, 0, 1, 327691, 0, 1, 196620, 0, 1, 196621, 0, 1, 196622, 0, 1, 262158, 0, 1, 327694, 0, 1, 393230, 0, 1, 393231, 0, 1, 262159, 0, 1, 196623, 0, 1, 131086, 0, 1, 65550, 0, 1, 65549, 0, 1, 65548, 0, 1, 196617, 262144, 2, 262153, 262144, 2, 196618, 262144, 2, 196619, 262144, 2, 131083, 262144, 2, 65547, 262144, 2, 11, 262144, 2, 12, 262144, 2, 13, 262144, 2, 14, 262144, 2, 15, 262144, 2, 16, 262144, 2, 65552, 262144, 2, 196624, 262144, 2, 262160, 262144, 2, 327696, 262144, 2, 393232, 262144, 2, 458768, 262144, 2, 458766, 262144, 2, 393225, 262144, 2, 458761, 262144, 2, 458762, 262144, 2, 458763, 262144, 2, 131085, 262144, 2, 524304, 262144, 2, 589840, 262144, 2, 655376, 262144, 2, 655375, 262144, 2, 655374, 262144, 2, 655373, 262144, 2, 655372, 262144, 2, 655371, 262144, 2, 589835, 262144, 2, 524299, 262144, 2)
+
+[node name="LabCounters1_tiles" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_poidm")
+format = 2
 
 [node name="giant" parent="." instance=ExtResource("4_0l8t5")]
 position = Vector2(960, 252)
