@@ -1,6 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://5nt51w7o6rtf"]
+[gd_scene load_steps=7 format=3 uid="uid://bjlip7kbrmme4"]
 
+[ext_resource type="Shader" path="res://scenes/things/normal_map_shader.gdshader" id="1_nrbgn"]
 [ext_resource type="Texture2D" uid="uid://ve5v545ihy8m" path="res://assets/TileMaps/Tile Map Forest Layer 2.png" id="1_pxq55"]
+[ext_resource type="Texture2D" uid="uid://bh11ig4ex3rr1" path="res://assets/TileMaps/Tile Map Forest Layer 2_Normal Map.png" id="2_625y6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wnuur"]
+shader = ExtResource("1_nrbgn")
+shader_parameter/normal_map = ExtResource("2_625y6")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ytiik"]
 texture = ExtResource("1_pxq55")
@@ -8,11 +14,11 @@ texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14.9333, -10.6667, -2.13333, -14.9333, 10.6667, -10.6667, 14.9333, 2.13334, 10.6667, 14.9333, -2.13333, 19.2, -14.9333, 14.9333, -19.2, 2.13334)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14.9333, -10.6667, -2.13333, -14.9333, 10.6667, -10.6667, 14.9333, 2.13334, 10.6667, 14.9333, -2.13333, 19.2, -14.9333, 14.9333, -19.2, 2.13334)
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 2:0/0 = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
@@ -68,5 +74,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ytiik")
 
 [node name="Forest_Layer_2_tiles2" type="TileMap"]
+material = SubResource("ShaderMaterial_wnuur")
 tile_set = SubResource("TileSet_iebfm")
 format = 2

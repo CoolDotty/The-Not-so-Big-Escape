@@ -1,11 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://b36kwhhp5uto0"]
+[gd_scene load_steps=15 format=3 uid="uid://b36kwhhp5uto0"]
 
 [ext_resource type="Script" path="res://scenes/things/player_controller.gd" id="1_y7elc"]
 [ext_resource type="Texture2D" uid="uid://n0r0dhvnwf4b" path="res://assets/SpriteSheets/elephant_sprite_sheet_normalmap.png" id="2_jeatc"]
 [ext_resource type="Texture2D" uid="uid://cencfxxabr5ed" path="res://assets/SpriteSheets/Elephant Sprite Sheet.png" id="2_r556u"]
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="4_gfdkj"]
+[ext_resource type="Shader" path="res://scenes/things/normal_map_shader.gdshader" id="5_fyt6k"]
 [ext_resource type="Texture2D" uid="uid://bbb5iglus4x38" path="res://assets/Misc_character_other/elephantpankake.png" id="5_lj54y"]
 [ext_resource type="Texture2D" uid="uid://bclixkfrqdby1" path="res://assets/SpriteSheets/toots2.png" id="6_s7k6v"]
+[ext_resource type="Texture2D" uid="uid://bjahuho4swe7e" path="res://assets/Misc_character_other/elephantpankake_normalmap.png" id="6_ywidp"]
 [ext_resource type="Texture2D" uid="uid://bav4dhr662ofp" path="res://assets/SpriteSheets/toots.png" id="7_3qh60"]
 
 [sub_resource type="Shader" id="Shader_omgl8"]
@@ -28,6 +30,10 @@ shader_parameter/normal_map = ExtResource("2_jeatc")
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f7jqg"]
 radius = 15.0
 height = 40.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lsoqa"]
+shader = ExtResource("5_fyt6k")
+shader_parameter/normal_map = ExtResource("6_ywidp")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2sjw"]
 size = Vector2(40, 10)
@@ -55,6 +61,7 @@ height = 20.0
 
 [node name="DeathSprite" type="Sprite2D" parent="."]
 visible = false
+material = SubResource("ShaderMaterial_lsoqa")
 scale = Vector2(0.64375, 0.64375)
 texture = ExtResource("5_lj54y")
 hframes = 3
