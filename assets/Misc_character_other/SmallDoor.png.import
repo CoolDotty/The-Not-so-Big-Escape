@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbb5iglus4x38"
-path="res://.godot/imported/elephantpankake.png-9e3f364aac94c5aad1f0a513cd6ed741.ctex"
+uid="uid://30nj1afwwnel"
+path="res://.godot/imported/SmallDoor.png-e2b35e74c062860d7571b2de431457e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/elephantpankake.png"
-dest_files=["res://.godot/imported/elephantpankake.png-9e3f364aac94c5aad1f0a513cd6ed741.ctex"]
+source_file="res://assets/Misc_character_other/SmallDoor.png"
+dest_files=["res://.godot/imported/SmallDoor.png-e2b35e74c062860d7571b2de431457e9.ctex"]
 
 [params]
 

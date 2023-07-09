@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b56dj1jny1krv"
-path="res://.godot/imported/puzzle_tiles.png-5d5a5fdca9bb267db84d84de65aa6efa.ctex"
+uid="uid://3avfbwrnd7fg"
+path="res://.godot/imported/Mouse_normal.png-9b835062fbb46a06bc2250c314c3ebf5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/puzzle_tiles.png"
-dest_files=["res://.godot/imported/puzzle_tiles.png-5d5a5fdca9bb267db84d84de65aa6efa.ctex"]
+source_file="res://assets/Misc_character_other/Mouse_normal.png"
+dest_files=["res://.godot/imported/Mouse_normal.png-9b835062fbb46a06bc2250c314c3ebf5.ctex"]
 
 [params]
 

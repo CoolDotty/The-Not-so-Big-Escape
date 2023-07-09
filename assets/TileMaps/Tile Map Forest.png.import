@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ve5v545ihy8m"
-path="res://.godot/imported/Tile Map Forest Layer 2.png-ec192153877e134035f2b53591ca2f4a.ctex"
+uid="uid://1gvlj0b6y2ui"
+path="res://.godot/imported/Tile Map Forest.png-53553476390bf478d69ba5d3b899254e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tile Map Forest Layer 2.png"
-dest_files=["res://.godot/imported/Tile Map Forest Layer 2.png-ec192153877e134035f2b53591ca2f4a.ctex"]
+source_file="res://assets/TileMaps/Tile Map Forest.png"
+dest_files=["res://.godot/imported/Tile Map Forest.png-53553476390bf478d69ba5d3b899254e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbnqsihlpilyp"
-path="res://.godot/imported/Valves.png-b7ce9069eb236307a12c30090ae90f8d.ctex"
+uid="uid://ve5v545ihy8m"
+path="res://.godot/imported/Tile Map Forest Layer 2.png-e1a50681310e67b6cf3e4e06123ba97f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Valves.png"
-dest_files=["res://.godot/imported/Valves.png-b7ce9069eb236307a12c30090ae90f8d.ctex"]
+source_file="res://assets/TileMaps/Tile Map Forest Layer 2.png"
+dest_files=["res://.godot/imported/Tile Map Forest Layer 2.png-e1a50681310e67b6cf3e4e06123ba97f.ctex"]
 
 [params]
 

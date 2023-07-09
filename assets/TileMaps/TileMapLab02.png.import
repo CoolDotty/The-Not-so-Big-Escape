@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddr7yi2olq7gu"
-path="res://.godot/imported/Mouse_game_jam_sprite_sheet_normal_map.png-f78ea983777ad2dceebd967a34769840.ctex"
+uid="uid://cm0r3l6b6yn81"
+path="res://.godot/imported/TileMapLab02.png-6893dbcfa59edffcea5fbfe443780a18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mouse_game_jam_sprite_sheet_normal_map.png"
-dest_files=["res://.godot/imported/Mouse_game_jam_sprite_sheet_normal_map.png-f78ea983777ad2dceebd967a34769840.ctex"]
+source_file="res://assets/TileMaps/TileMapLab02.png"
+dest_files=["res://.godot/imported/TileMapLab02.png-6893dbcfa59edffcea5fbfe443780a18.ctex"]
 
 [params]
 

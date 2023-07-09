@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfbvfw5u1u07d"
-path="res://.godot/imported/forestdoor.png-2849fb1ce064c20c5cbc3bd94ca07bca.ctex"
+uid="uid://dc0hdxfiuunid"
+path="res://.godot/imported/Mouse_game_jam_sprite_sheet.png-fa13a859498fcecc8a00cb9606f28985.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/forestdoor.png"
-dest_files=["res://.godot/imported/forestdoor.png-2849fb1ce064c20c5cbc3bd94ca07bca.ctex"]
+source_file="res://assets/SpriteSheets/Mouse_game_jam_sprite_sheet.png"
+dest_files=["res://.godot/imported/Mouse_game_jam_sprite_sheet.png-fa13a859498fcecc8a00cb9606f28985.ctex"]
 
 [params]
 

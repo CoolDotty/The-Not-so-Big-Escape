@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fk0vaie5ydyc"
-path="res://.godot/imported/elephant-top-view.svg.hi.png-afaa44ccc33084c4dbc856330af92b36.ctex"
+uid="uid://ddr7yi2olq7gu"
+path="res://.godot/imported/Mouse_game_jam_sprite_sheet_normal_map.png-72d7781d4171222556cc37fb0bc3031c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/elephant-top-view.svg.hi.png"
-dest_files=["res://.godot/imported/elephant-top-view.svg.hi.png-afaa44ccc33084c4dbc856330af92b36.ctex"]
+source_file="res://assets/SpriteSheets/Mouse_game_jam_sprite_sheet_normal_map.png"
+dest_files=["res://.godot/imported/Mouse_game_jam_sprite_sheet_normal_map.png-72d7781d4171222556cc37fb0bc3031c.ctex"]
 
 [params]
 

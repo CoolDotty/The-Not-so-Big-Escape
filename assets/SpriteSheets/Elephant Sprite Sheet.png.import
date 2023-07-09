@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsri3pbifm4eq"
-path="res://.godot/imported/flatrat.png-249700b00f6e8d2038b3035b323812d1.ctex"
+uid="uid://cencfxxabr5ed"
+path="res://.godot/imported/Elephant Sprite Sheet.png-93b1295816dd7637e9d9b74864743dc3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/flatrat.png"
-dest_files=["res://.godot/imported/flatrat.png-249700b00f6e8d2038b3035b323812d1.ctex"]
+source_file="res://assets/SpriteSheets/Elephant Sprite Sheet.png"
+dest_files=["res://.godot/imported/Elephant Sprite Sheet.png-93b1295816dd7637e9d9b74864743dc3.ctex"]
 
 [params]
 

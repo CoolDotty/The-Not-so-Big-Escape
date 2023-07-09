@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b881cqqhkpuf3"
-path="res://.godot/imported/TileMapLabCounters.png-ff8b27e469df1f4fc8fb47dc9f38fcff.ctex"
+uid="uid://bbb5iglus4x38"
+path="res://.godot/imported/elephantpankake.png-ec5cb48a3a45bd03bf70aab15dc8fc14.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TileMapLabCounters.png"
-dest_files=["res://.godot/imported/TileMapLabCounters.png-ff8b27e469df1f4fc8fb47dc9f38fcff.ctex"]
+source_file="res://assets/Misc_character_other/elephantpankake.png"
+dest_files=["res://.godot/imported/elephantpankake.png-ec5cb48a3a45bd03bf70aab15dc8fc14.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cencfxxabr5ed"
-path="res://.godot/imported/Elephant Sprite Sheet.png-99218125f499bc871580373fcbea71cb.ctex"
+uid="uid://df1xunllu05nd"
+path="res://.godot/imported/crate.png-44a65197c4615752079dd44d0f09d2f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Elephant Sprite Sheet.png"
-dest_files=["res://.godot/imported/Elephant Sprite Sheet.png-99218125f499bc871580373fcbea71cb.ctex"]
+source_file="res://assets/Interactable/crate.png"
+dest_files=["res://.godot/imported/crate.png-44a65197c4615752079dd44d0f09d2f2.ctex"]
 
 [params]
 
