@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c3cp8fg74l6id"]
+[gd_scene load_steps=12 format=3 uid="uid://c3cp8fg74l6id"]
 
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="1_leps8"]
 [ext_resource type="Texture2D" uid="uid://dpgtephvqr7tk" path="res://assets/NewTileMap.png" id="2_ptby5"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dhpew2jc8qhnk" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="6_ukf0c"]
 [ext_resource type="PackedScene" uid="uid://c34tt84paekjm" path="res://scenes/things/level_exit.tscn" id="7_bgyyk"]
 [ext_resource type="PackedScene" uid="uid://c8sqi8lwc00xb" path="res://scenes/levels/Outside_2.tscn" id="8_pgjgv"]
+[ext_resource type="PackedScene" uid="uid://dapbbrcphrkey" path="res://scenes/levels/lighting_test.tscn" id="9_h8bgh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5cdio"]
 texture = ExtResource("2_ptby5")
@@ -122,13 +123,16 @@ position = Vector2(-97, -288)
 [node name="player" parent="." instance=ExtResource("5_0fhlb")]
 position = Vector2(207, 161)
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(3, 284)
-energy = 0.5
-shadow_enabled = true
-texture = ExtResource("6_ukf0c")
-height = 10.0
-
 [node name="level_exit" parent="." instance=ExtResource("7_bgyyk")]
 position = Vector2(963, 351)
 next_scene = ExtResource("8_pgjgv")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(528.5, 322)
+scale = Vector2(11.1211, 10.75)
+color = Color(0.898039, 1, 1, 1)
+energy = 0.5
+texture = ExtResource("6_ukf0c")
+height = 10.0
+
+[node name="lighting" parent="." instance=ExtResource("9_h8bgh")]
