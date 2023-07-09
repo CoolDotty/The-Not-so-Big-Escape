@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d0ma114qhbsb1"]
+[gd_scene load_steps=12 format=3 uid="uid://d0ma114qhbsb1"]
 
 [ext_resource type="PackedScene" uid="uid://by2e3mxkhbltn" path="res://scenes/things/puzzle_tiles.tscn" id="1_leps8"]
 [ext_resource type="PackedScene" uid="uid://c74yswrtojvlj" path="res://assets/TileMaps/valves_tiles.tscn" id="2_epokc"]
@@ -11,21 +11,14 @@
 [ext_resource type="PackedScene" uid="uid://cr84yd28blu11" path="res://scenes/things/pressurePlate.tscn" id="10_4uxnt"]
 [ext_resource type="PackedScene" uid="uid://bjlip7kbrmme4" path="res://assets/TileMaps/forest_layer_2_tiles_2.tscn" id="10_u6l1v"]
 [ext_resource type="Texture2D" uid="uid://u2e5h6vhckqh" path="res://scenes/things/PurpleShroom.png" id="11_yrar0"]
-[ext_resource type="PackedScene" uid="uid://df0vrto2ywn2h" path="res://scenes/things/cheatyfaucet.tscn" id="12_w8tur"]
-[ext_resource type="PackedScene" uid="uid://c0b5joknarjl3" path="res://scenes/things/Valve.tscn" id="13_mqkpw"]
-[ext_resource type="AudioStream" uid="uid://dwplycluq2xwo" path="res://assets/sounds/Forest-theme-V2.mp3" id="14_nbyle"]
-[ext_resource type="PackedScene" uid="uid://p2r2cnmc7hwn" path="res://scenes/storymode/instastories/instastory.tscn" id="15_2myit"]
-[ext_resource type="Resource" uid="uid://dohutmukplx2a" path="res://outside_2_story.dialogue" id="16_55bad"]
 
 [node name="level1" type="Node2D"]
 
 [node name="puzzle_tiles" parent="." instance=ExtResource("1_leps8")]
 z_index = -1
-navigation_visibility_mode = 1
 layer_0/tile_data = PackedInt32Array(65536, 196609, 7, 131072, 1, 6, 196608, 1, 7, 262144, 1, 7, 327680, 1, 7, 393216, 1, 7, 458752, 1, 7, 524288, 1, 8, 65537, 196609, 7, 131073, 65537, 6, 196609, 196609, 8, 262145, 65537, 7, 327681, 65537, 7, 393217, 65537, 7, 458753, 131073, 7, 524289, 131073, 8, 524290, 196609, 7, 524292, 196609, 8, 524293, 65537, 7, 524295, 65537, 6, 524296, 65537, 7, 524297, 65537, 4, 524298, 65537, 4, 524299, 65537, 3, 524300, 65537, 4, 524303, 131073, 5, 458767, 131073, 4, 458761, 65537, 4, 458759, 196609, 7, 458757, 65537, 7, 458756, 1, 6, 458754, 196609, 7, 393218, 131073, 8, 393221, 1, 7, 393224, 65537, 7, 393225, 65537, 4, 393226, 65537, 4, 393227, 65537, 5, 393228, 65537, 4, 393231, 131073, 4, 327695, 131073, 4, 327694, 1, 4, 327692, 131073, 4, 327691, 65537, 4, 327690, 196609, 6, 327689, 65537, 4, 327688, 65537, 4, 327687, 65537, 7, 327686, 65537, 7, 327685, 1, 4, 327684, 196609, 5, 327682, 131073, 7, 262146, 65537, 7, 262147, 65537, 8, 262148, 65537, 8, 262149, 65537, 7, 262151, 65537, 7, 262152, 65537, 7, 262153, 65537, 6, 262154, 65537, 4, 262155, 65537, 4, 262156, 65537, 4, 262159, 131073, 4, 196623, 65537, 4, 196622, 65537, 4, 196620, 65537, 4, 196618, 1, 7, 196617, 196609, 7, 196615, 65537, 7, 196614, 196609, 8, 196613, 65537, 7, 196612, 65537, 7, 196611, 65537, 7, 196610, 65537, 7, 131074, 65537, 7, 131076, 196609, 8, 131077, 65537, 6, 131078, 65537, 7, 131079, 65537, 4, 131080, 65537, 7, 131081, 65537, 8, 131082, 65537, 4, 131083, 65537, 4, 131084, 131073, 4, 131086, 1, 4, 131087, 131073, 4, 65551, 131073, 3, 65550, 65537, 4, 65548, 65537, 4, 65547, 65537, 4, 65546, 196609, 8, 65545, 65537, 7, 65544, 65537, 4, 65543, 65537, 7, 65542, 1, 4, 65541, 196609, 7, 65540, 131073, 6, 65539, 65537, 7, 65538, 1, 7, 393230, 65537, 4, 458766, 65537, 4, 524302, 196609, 6, 524301, 65537, 4, 589839, 196609, 5, 589838, 131073, 5, 589837, 65537, 5, 589836, 65537, 4, 589835, 65537, 4, 589834, 65537, 7, 589833, 65537, 8, 589832, 196609, 8, 589831, 65537, 4, 0, 196609, 7, 1, 196609, 7, 3, 131073, 6, 4, 196609, 7, 5, 196609, 7, 6, 1, 3, 7, 65537, 6, 8, 65537, 6, 9, 65537, 6, 10, 65537, 3, 11, 65537, 3, 12, 65537, 3, 13, 65537, 3, 14, 131073, 3, 15, 196609, 5, 655374, 1, 3, 655375, 131073, 3, 655373, 196609, 5, 655372, 131073, 5, 655371, 65537, 5, 655370, 1, 5, 655368, 131073, 8, 655363, 1, 8, 655362, 196609, 7, 655361, 196609, 7, 655364, 65537, 8, 655369, 196609, 5, 589824, 196609, 7, 655360, 131073, 6, 458760, 1, 4, 196616, 131073, 7, 589825, 196609, 7, 589826, 196609, 7, 589827, 1, 7, 589828, 65537, 7, 589829, 65537, 7, 393222, 65537, 7, 393223, 65537, 8, 65549, 65537, 5, 131085, 196609, 5, 196621, 65537, 3, 262157, 65537, 5, 327693, 196609, 5, 458765, 65537, 4, 327683, 196609, 7, 393219, 196609, 7, 393220, 196609, 7, 131075, 65537, 7, 2, 1, 6, 458755, 196609, 7, 524291, 1, 6, 458758, 131073, 7, 524294, 65537, 7, 196619, 196609, 6, 458762, 131073, 4, 458763, 196609, 5, 458764, 1, 4, 393229, 65537, 3, 589830, 65537, 7, 655366, 65537, 8, 655365, 65537, 5, 262150, 65537, 7, 655367, 65537, 8, 262158, 65537, 4)
 
 [node name="Valves_tiles2" parent="." instance=ExtResource("2_epokc")]
-visible = false
 layer_0/tile_data = PackedInt32Array(7, 65537, 0, 65546, 1, 1)
 
 [node name="Forest_Layer_2_tiles3" parent="." instance=ExtResource("10_u6l1v")]
@@ -43,7 +36,7 @@ position = Vector2(182, 67)
 position = Vector2(992, 224)
 next_scene = ExtResource("8_pgjgv")
 Triggers = [NodePath("../pressurePlate")]
-Target_Instagators = [NodePath("../player")]
+Target_Instagators = [NodePath("../giant")]
 require_triggers_to_open = 1
 
 [node name="PointLight2D_GreenTree1" type="PointLight2D" parent="."]
@@ -94,18 +87,3 @@ position = Vector2(860, 253)
 [node name="Sprite2D" type="Sprite2D" parent="pressurePlate"]
 position = Vector2(51, 8)
 texture = ExtResource("11_yrar0")
-
-[node name="cheatyfaucet" parent="." instance=ExtResource("12_w8tur")]
-position = Vector2(669, 96)
-
-[node name="Valve" parent="." instance=ExtResource("13_mqkpw")]
-position = Vector2(476, 27)
-
-[node name="ForestSong" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("14_nbyle")
-autoplay = true
-
-[node name="instastory" parent="." instance=ExtResource("15_2myit")]
-story = ExtResource("16_55bad")
-
-[connection signal="interacted" from="Valve" to="cheatyfaucet" method="_on_interacted"]
