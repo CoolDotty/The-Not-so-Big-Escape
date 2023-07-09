@@ -1,6 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bday1l4lbsckq"]
+[gd_scene load_steps=10 format=3 uid="uid://bday1l4lbsckq"]
 
+[ext_resource type="Shader" path="res://scenes/things/normal_map_shader.gdshader" id="1_jqxu6"]
 [ext_resource type="Texture2D" uid="uid://b2s4xf53fgymx" path="res://assets/TileMaps/TileMapLab.png" id="1_sp1gu"]
+[ext_resource type="Texture2D" uid="uid://bmtrkosf3posa" path="res://assets/TileMaps/TileMapLabNormals.png" id="2_8csga"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w66x6"]
+shader = ExtResource("1_jqxu6")
+shader_parameter/normal_map = ExtResource("2_8csga")
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4h4ub"]
 polygon = PackedVector2Array(-32, -32, 32, -32, 32, -16, 32, 32, 32, 32, -32, 32, -32, 32)
@@ -204,6 +210,7 @@ physics_layer_1/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_mah3j")
 
 [node name="TileMapLab_tiles" type="TileMap"]
+material = SubResource("ShaderMaterial_w66x6")
 tile_set = SubResource("TileSet_5bh66")
 format = 2
 layer_0/tile_data = PackedInt32Array(327687, 131072, 0, 262152, 65536, 1, 327688, 0, 2, 393224, 131072, 2, 196617, 262144, 2, 262153, 262144, 2, 327689, 65536, 4, 393225, 262144, 2, 458761, 262144, 2, 196618, 262144, 2, 262154, 0, 1, 327690, 0, 1, 393226, 0, 1, 458762, 262144, 2, 11, 262144, 2, 65547, 262144, 2, 131083, 262144, 2, 196619, 262144, 2, 262155, 0, 1, 327691, 0, 1, 393227, 0, 1, 458763, 262144, 2, 524299, 262144, 2, 589835, 262144, 2, 655371, 262144, 2, 12, 262144, 2, 65548, 0, 1, 131084, 0, 6, 196620, 0, 1, 262156, 0, 1, 327692, 0, 3, 393228, 0, 1, 458764, 0, 1, 524300, 0, 1, 589836, 0, 1, 655372, 262144, 2, 13, 262144, 2, 65549, 0, 1, 131085, 262144, 2, 196621, 0, 1, 262157, 0, 3, 327693, 0, 3, 393229, 0, 1, 458765, 0, 1, 524301, 0, 1, 589837, 131072, 1, 655373, 262144, 2, 14, 262144, 2, 65550, 0, 1, 131086, 0, 1, 196622, 0, 1, 262158, 0, 1, 327694, 0, 1, 393230, 0, 1, 458766, 262144, 2, 524302, 0, 1, 589838, 0, 1, 655374, 262144, 2, 15, 262144, 2, 65551, 0, 3, 131087, 131072, 0, 196623, 0, 1, 262159, 0, 1, 327695, 65536, 1, 393231, 0, 1, 458767, 0, 1, 524303, 0, 1, 589839, 0, 1, 655375, 262144, 2, 16, 262144, 2, 65552, 262144, 2, 131088, 65536, 4, 196624, 262144, 2, 262160, 262144, 2, 327696, 262144, 2, 393232, 262144, 2, 458768, 262144, 2, 524304, 262144, 2, 589840, 262144, 2, 655376, 262144, 2)
