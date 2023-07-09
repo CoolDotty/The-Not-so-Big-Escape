@@ -26,7 +26,10 @@ effect = 1
 script = ExtResource("3_ss7hs")
 pic = ExtResource("5_3bgex")
 text = "“No, no, no! THE FOREST! Quick, you need to close the main valve! I have to try and stop the stream from reaching further downhill!
-“The water for sure is coming from that building. There should be a valve inside. Find it and turn it off! I know you can do it. Save the forest! Also, mind Trunks!\"
+
+The water for sure is coming from that building. There should be a valve inside. Find it and turn it off! I know you can do it. Save the forest! 
+
+...Also, mind Trunks!\"
 "
 effect = 0
 

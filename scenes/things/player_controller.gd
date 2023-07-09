@@ -56,7 +56,16 @@ func _no_collide():
 
 
 func squeak():
+	$TrumpetSpriteSqueak.visible = true
+	$TrumpetSpriteNotes.visible = true
+	for i in range(0, $TrumpetSpriteSqueak.hframes*4):
+		$TrumpetSpriteSqueak.frame = i/4
+		$TrumpetSpriteNotes.frame = i/4
+		await get_tree().physics_frame
 	Global.mouse_squeaked.emit(self)
+	$TrumpetSpriteSqueak.visible = false
+	$TrumpetSpriteNotes.visible = false
+	
 
 
 var _interact_Comp : ShapeCast2D
