@@ -2,9 +2,15 @@ extends Node2D
 
 
 @export var opening : bool
+
 @export var Triggers: Array[Interactable]
 @export var Target_Instagators: Array[CharacterBody2D]
 @export var require_triggers_to_open: int
+
+@export var currentNav_map : TileMap
+@export var onOpen_override_layer : int
+@export var onOpen_override_sourceID : int
+@export var onOpen_override_atlas_coordinates: Vector2i
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -39,7 +45,13 @@ func Interacted(Instigator, trigger : Interactable):
 
 func Set_isDoorOpen(enable : bool):
 	opening = enable
+	updateCurrentNavTile(onOpen_override_layer, onOpen_override_sourceID, onOpen_override_atlas_coordinates)
 	call_deferred("_setCollisionDisable", enable)
 	
 func _setCollisionDisable(enable : bool):
 	$StaticBody2D/CollisionShape2D.disabled = enable
+	
+func updateCurrentNavTile(layer : int, sourceID : int, atlas_coordinates : Vector2i):
+	var replaceTile_coordinate : Vector2i = currentNav_map.local_to_map(position)
+	currentNav_map.set_cell(layer, replaceTile_coordinate, sourceID, atlas_coordinates, 0)
+	pass
