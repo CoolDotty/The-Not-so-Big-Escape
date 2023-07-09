@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://3avfbwrnd7fg" path="res://assets/Mouse_normal.png" id="5_owpbs"]
 [ext_resource type="Texture2D" uid="uid://bsri3pbifm4eq" path="res://assets/flatrat.png" id="5_tdp7g"]
 [ext_resource type="Texture2D" uid="uid://bp5w1gymnh2nj" path="res://assets/crateboom.png" id="6_8f2qk"]
-[ext_resource type="PackedScene" uid="uid://df8thgcaxandl" path="res://scenes/levels/Outside_0.tscn" id="7_wj2mj"]
+[ext_resource type="PackedScene" uid="uid://bg2qbdffcvl47" path="res://scenes/levels/Outside_0.tscn" id="7_wj2mj"]
 
 [sub_resource type="Resource" id="Resource_a85eo"]
 script = ExtResource("3_ss7hs")
